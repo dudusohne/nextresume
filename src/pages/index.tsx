@@ -1,7 +1,9 @@
 import { Flex, Button, Stack, Avatar, Text } from '@chakra-ui/react'
 import { Input } from '../components/Form/Input'
+import router from 'next/router';
 
 export default function SignIn() {
+
   return (
 
     <Flex w="100vw" h="100vh" align="center" justify="center">
@@ -21,7 +23,7 @@ export default function SignIn() {
 
           <Flex direction="column">
             <Avatar size="2xl" name="Eduardo Sohne" src="https://avatars.githubusercontent.com/u/19408694?v=4" borderColor="blue.300" borderWidth={3} />
-            <Button type="submit" mt="4" fontWeight="bold" colorScheme="orange" size="md">ACCESS</Button>
+            <Button type="button" mt="4" fontWeight="bold" colorScheme="orange" size="md" onClick={() => router.push(`/home`)}>ACCESS</Button>
           </Flex>
         </Flex>
 
