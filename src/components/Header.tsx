@@ -1,5 +1,7 @@
 import { Flex, Text, Input, Icon, HStack, Box, Avatar } from '@chakra-ui/react'
-import { RiSearchLine, RiNotificationLine, RiUserAddLine } from 'react-icons/ri'
+import { RiSearchLine, RiNotificationLine } from 'react-icons/ri'
+import { AiOutlineInfoCircle } from 'react-icons/ai'
+
 
 export function Header() {
 
@@ -15,7 +17,7 @@ export function Header() {
                     variant="unstyled"
                     px="4"
                     mr="4"
-                    placeholder="buscar na plataforma"
+                    placeholder="search projects"
                     _placeholder={{
                         color: 'gray.400'
                     }}
@@ -28,13 +30,13 @@ export function Header() {
             >
                 <HStack spacing="8" mx="8" paddingRight="8" py="1" color="gray.300" borderRightWidth={1} borderColor="gray.700" >
                     <Icon as={RiNotificationLine} fontSize="20" />
-                    <Icon as={RiUserAddLine} fontSize="20" />
+                    <Icon as={AiOutlineInfoCircle} fontSize="20" />
                 </HStack>
                 <Flex align="center">
                     <Box mr="4" textAlign="right">
                         <Text>Eduardo Sohne</Text>
                         <Text color="gray.300" fontSize="small">
-                            eduardosmartmkt@gmail.com
+                            dudu.hit@gmail.com
                         </Text>
                     </Box>
                     <Avatar size="md" name="Eduardo Sohne" src="https://avatars.githubusercontent.com/u/19408694?v=4" />
