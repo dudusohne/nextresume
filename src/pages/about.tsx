@@ -25,6 +25,8 @@ export default function About() {
                                     <Th>NAME / EMAIL</Th>
                                     <Th>BIRTHDATE</Th>
                                     <Th>CITY/STATE</Th>
+                                    <Th>PRO EXP TIME</Th>
+                                    <Th>CONDING IN REACT</Th>
                                     <Th w="8"></Th>
                                 </Tr>
                             </Thead>
