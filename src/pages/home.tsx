@@ -10,20 +10,20 @@ export default function Home() {
                 <Sidebar />
 
                 <SimpleGrid flex="1" gap="4" minChildWidth={320} align="flex-start">
-                    <Box p="8" bg="gray.800" borderRadius={8}>
+                    <Box p="8" bg="gray.200" borderRadius={8} borderWidth={1} borderColor="gray.300">
                         <Stack spacing="4">
                             <Box>
-                                <Text as="span" color="blue.600" fontWeight="bold" fontSize={22}>CASA LIBRE</Text>
+                                <Text as="span" color="black" fontWeight="bold" fontSize={30}>CASA LIBRE</Text>
                                 <Divider opacity="0.1" />
-                                <Text color="gray.400" fontWeight="600">this project has a purpose of managing stock, tabs and sales for a pub.</Text>
+                                <Text color="red.600" fontWeight="600">this project has a purpose of managing stock, tabs and sales for a pub.</Text>
                             </Box>
                             <Box>
-                                <Text as="span" color="orange.300" fontWeight="500" fontSize={18}>tools and techs:</Text>
-                                <Text>react, typescript, firebase and sass</Text>
+                                <Text as="span" color="gray.800" fontWeight="600" fontSize={22}>tools and techs:</Text>
+                                <Text  color="black">react, typescript, firebase and sass</Text>
                             </Box>
                             <Box>
-                                <Text as="span" color="orange.300" fontWeight="500" fontSize={18}>core functions:</Text>
-                                <Text>
+                                <Text as="span" color="gray.800" fontWeight="600" fontSize={22}>core functions:</Text>
+                                <Text  color="black">
                                     access only by auth with firebase,
                                     realtime tabs-viewer with react hooks and realtime database,
                                     product inventory, daily and monthly cash-closer dashboard.
@@ -31,20 +31,20 @@ export default function Home() {
                             </Box>
                         </Stack>
                     </Box>
-                    <Box p="8" bg="gray.800" borderRadius={8}>
+                    <Box p="8" bg="gray.200" borderRadius={8} borderWidth={1} borderColor="gray.300">
                         <Stack spacing="4">
                             <Box>
-                                <Text as="span" color="red.600" fontWeight="bold" fontSize={22}>ACTIVE SALES</Text>
+                                <Text as="span" color="black" fontWeight="bold" fontSize={30}>ACTIVE SALES</Text>
                                 <Divider opacity="0.1" />
-                                <Text color="gray.400" fontWeight="600">this project has a purpose of managing sales for a company, stores and salesforce.</Text>
+                                <Text color="red.600" fontWeight="600">this project has a purpose of managing sales for a company, stores and salesforce.</Text>
                             </Box>
                             <Box>
-                                <Text as="span" color="orange.300" fontWeight="500" fontSize={18}>tools and techs:</Text>
-                                <Text>react, typescript, firebase and sass</Text>
+                                <Text as="span" color="gray.800" fontWeight="500" fontSize={22}>tools and techs:</Text>
+                                <Text color="black" fontWeight="400">react, typescript, firebase and sass</Text>
                             </Box>
                             <Box>
-                                <Text as="span" color="orange.300" fontWeight="500" fontSize={18}>core functions:</Text>
-                                <Text>
+                                <Text as="span" color="gray.800" fontWeight="500" fontSize={22}>core functions:</Text>
+                                <Text color="black" fontWeight="400">
                                     access only by auth with firebase(google and email/password),
                                     realtime data with react hooks and realtime database,
                                     sku ranking, saler ranking and more data measures.
@@ -52,20 +52,20 @@ export default function Home() {
                             </Box>
                         </Stack>
                     </Box>
-                    <Box p="8" bg="gray.800" borderRadius={8}>
+                    <Box p="8" bg="gray.200" borderRadius={8} borderWidth={1} borderColor="gray.300">
                         <Stack spacing="4">
                             <Box>
-                                <Text as="span" color="blue.600" fontWeight="bold" fontSize={22}>NEXTRESUME</Text>
+                                <Text as="span" color="black" fontWeight="bold" fontSize={30}>NEXTRESUME</Text>
                                 <Divider opacity="0.1" />
-                                <Text color="gray.400" fontWeight="600">this project has a purpose of show my personal portfolio.</Text>
+                                <Text color="red.600" fontWeight="600">this project has a purpose of show my personal portfolio.</Text>
                             </Box>
                             <Box>
-                                <Text as="span" color="orange.300" fontWeight="500" fontSize={18}>tools and techs:</Text>
-                                <Text>next, typescript and chakra.ui</Text>
+                                <Text as="span" color="gray.800" fontWeight="500" fontSize={22}>tools and techs:</Text>
+                                <Text color="black">next, typescript and chakra.ui</Text>
                             </Box>
                             <Box>
-                                <Text as="span" color="orange.300" fontWeight="500" fontSize={18}>core functions:</Text>
-                                <Text>
+                                <Text as="span" color="gray.800" fontWeight="500" fontSize={22}>core functions:</Text>
+                                <Text color="black">
                                     still deciding
                                 </Text>
                             </Box>

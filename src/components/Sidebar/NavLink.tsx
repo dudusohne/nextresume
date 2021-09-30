@@ -13,8 +13,8 @@ export function NavLink({ children, icon, href, ...rest }: NavLinkProps) {
         // eslint-disable-next-line @next/next/link-passhref
         <ActiveLink href={href} passHref>
             <ChakraLink display="flex" align="center"{...rest}>
-                <Icon as={icon} fontSize="20" />
-                <Text ml="4" fontWeight="medium">{children}</Text>
+                <Icon as={icon} fontSize="20" color="gray.700"/>
+                <Text ml="4" fontWeight="medium" color="gray.700">{children}</Text>
             </ChakraLink>
         </ActiveLink>
     );

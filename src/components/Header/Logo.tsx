@@ -8,10 +8,11 @@ export function Logo() {
             fontWeight="bold"
             letterSpacing="tight"
             w="64"
+            color="gray.700"
         >
             next
             <Text
-                color="blue.500"
+                color="black"
                 as="span"
             >
                 resume  
