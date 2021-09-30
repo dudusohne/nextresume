@@ -37,7 +37,7 @@ export default function Home() {
                                     product inventory, daily and monthly cash-closer dashboard.
                                 </Text>
                             </Box>
-                            <Button>SAIBA MAIS</Button>
+                            <Button>SEE MORE</Button>
                         </Stack>
                     </Box>
                     <Box p="8" borderRadius={8} borderWidth={1} borderColor="gray.300" transition="0.4s ease" _hover={{ borderColor: 'red.300' }}>
@@ -59,7 +59,7 @@ export default function Home() {
                                     sku ranking, saler ranking and more data measures.
                                 </Text>
                             </Box>
-                            <Button>SAIBA MAIS</Button>
+                            <Button>SEE MORE</Button>
                         </Stack>
                     </Box>
                     <Box p="8" borderRadius={8} borderWidth={1} borderColor="gray.300" transition="0.4s ease" _hover={{ borderColor: 'red.300' }}>
