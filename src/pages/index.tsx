@@ -16,15 +16,15 @@ export default function SignIn() {
             <Text fontSize="3xl" fontWeight="bold" letterSpacing="tight" w="50" h="5" color="black">Eduardo</Text>
             <Text fontSize="3xl" fontWeight="bold" letterSpacing="tight" w="50" h="8" color="black">Sohne</Text>
             <Stack spacing="0.1">
-              <Text as="span" fontSize="2xl" fontWeight="bold" letterSpacing="tight" w="50" h="5" color="orange.500">software</Text>
-              <Text as="span" fontSize="2xl" fontWeight="bold" letterSpacing="tight" w="50" h="8" color="orange.500">engineer</Text>
+              <Text as="span" fontSize="2xl" fontWeight="bold" letterSpacing="tight" w="50" h="5" color="red.700">software</Text>
+              <Text as="span" fontSize="2xl" fontWeight="bold" letterSpacing="tight" w="50" h="8" color="red.700">engineer</Text>
             </Stack>
 
           </Stack>
 
           <Flex direction="column">
-            <Avatar size="2xl" name="Eduardo Sohne" src="https://avatars.githubusercontent.com/u/19408694?v=4"  borderWidth={3} borderColor="orange.400"/>
-            <Button type="button" mt="4" fontWeight="bold" bgColor="black" size="md" onClick={() => router.push(`/home`)} _hover={{background: 'orange.400'}}>ACCESS</Button>
+            <Avatar size="2xl" name="Eduardo Sohne" src="https://avatars.githubusercontent.com/u/19408694?v=4"  borderWidth={3} borderColor="red.700"/>
+            <Button type="button" mt="4" fontWeight="bold" bgColor="black" color="white" size="md" onClick={() => router.push(`/home`)} _hover={{background: 'red.700'}}>ACCESS</Button>
           </Flex>
         </Flex>
 

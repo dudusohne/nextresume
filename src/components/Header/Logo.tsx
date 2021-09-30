@@ -1,6 +1,9 @@
-import { Text } from '@chakra-ui/react';
+import { Text, useColorModeValue } from '@chakra-ui/react';
 
 export function Logo() {
+    
+    const color = useColorModeValue("gray.800", "gray.200")
+    
     return (
         <Text
             as="span"
@@ -8,11 +11,11 @@ export function Logo() {
             fontWeight="bold"
             letterSpacing="tight"
             w="64"
-            color="gray.700"
+            color="gray.500"
         >
             next
             <Text
-                color="black"
+                color={color}
                 as="span"
             >
                 resume  

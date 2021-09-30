@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { Box, Text, Stack, Link, Icon } from '@chakra-ui/react';
+import { Box, Text, Stack, Link, Icon, useColorModeValue } from '@chakra-ui/react';
 import { RiContactsLine, RiDashboardLine } from 'react-icons/ri';
 
 interface NavSectionProps {
@@ -8,9 +8,12 @@ interface NavSectionProps {
 }
 
 export function NavSection({ title, children }: NavSectionProps) {
+    
+    const color = useColorModeValue("gray.800", "gray.200")
+
     return (
         <Box>
-            <Text fontWeight="bold" color="black" fontSize="small">{title}</Text>
+            <Text fontWeight="bold" color={color} fontSize="small">{title}</Text>
             <Stack spacing="4" mt="8" align="stretch">
                 {children}
             </Stack>

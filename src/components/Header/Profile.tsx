@@ -1,16 +1,19 @@
-import { Text, Box, Avatar, Flex } from '@chakra-ui/react';
+import { Text, Box, Avatar, Flex, useColorModeValue } from '@chakra-ui/react';
 
 interface ProfileProps {
     showProfileData?: boolean;
 }
 
 export function Profile({ showProfileData = true }: ProfileProps) {
+
+    const color = useColorModeValue("gray.800", "gray.200")
+
     return (
         <Flex align="center">
             {showProfileData && (
                 <Box mr="4" textAlign="right">
-                    <Text color="black">Eduardo Sohne</Text>
-                    <Text color="gray.800" fontSize="small">
+                    <Text color={color}>Eduardo Sohne</Text>
+                    <Text color={color} fontSize="small">
                         dudu.hit@gmail.com
                     </Text>
                 </Box>
