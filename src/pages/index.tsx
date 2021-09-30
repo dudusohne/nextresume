@@ -7,7 +7,7 @@ export default function SignIn() {
   return (
 
     <Flex w="100vw" h="100vh" align="center" justify="center" direction="column" bg="white">
-      <Text fontSize={18} fontWeight="500" letterSpacing="tight" w="50" h="5" color="red.500" mb="8">UNDER CONSTRUCTION</Text>
+      <Text fontSize={24} fontWeight="500" letterSpacing="tight" color="red.500" mb="8">UNDER CONSTRUCTION</Text>
       <Flex as="form" w="100%" maxWidth={360} bg="white   " padding="8" borderRadius={8} flexDir="column" borderColor="gray.300" borderWidth={1}>
 
         <Flex justify="space-between" align="center" px="2">
@@ -23,7 +23,7 @@ export default function SignIn() {
           </Stack>
 
           <Flex direction="column">
-            <Avatar size="2xl" name="Eduardo Sohne" src="https://avatars.githubusercontent.com/u/19408694?v=4"  borderWidth={3} borderColor="red.700"/>
+            <Avatar size="2xl" name="Eduardo Sohne" src="https://avatars.githubusercontent.com/u/19408694?v=4"/>
             <Button type="button" mt="4" fontWeight="bold" bgColor="black" color="white" size="md" onClick={() => router.push(`/home`)} _hover={{background: 'red.700'}}>ACCESS</Button>
           </Flex>
         </Flex>
