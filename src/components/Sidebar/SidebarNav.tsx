@@ -19,7 +19,6 @@ export function SidebarNav() {
             </NavSection>
 
             <NavSection title="CONTACT">
-                {/* <NavLink icon={RiInputMethodLine} href="/email">Email</NavLink> */}
                 <NavLink icon={RiGithubFill} href="https://github.com/dudusohne" target="_blank">Github</NavLink>
                 <NavLink icon={RiLinkedinBoxFill} href="https://www.linkedin.com/in/eduardo-sohne-62a183118/" target="_blank">Linkedin</NavLink>
             </NavSection>

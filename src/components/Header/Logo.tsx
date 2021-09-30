@@ -18,7 +18,7 @@ export function Logo() {
                 color={color}
                 as="span"
             >
-                resume  
+                portfolio  
             </Text>
         </Text>
     );

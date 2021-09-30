@@ -16,6 +16,15 @@ export function NotificationsNav() {
             borderRightWidth={1}
             borderColor="gray.700"
         >
+            <IconButton
+                variant="outline"
+                borderColor="gray.400"
+                aria-label="Call Sage"
+                fontSize="20px"
+                icon={<RiWhatsappFill color="gray" />}
+                transition="0.5s"
+                _hover={{ background: 'red.300', color: 'gray.600' }}
+            />
             <Switch colorScheme="red" size="md" onChange={toggleColorMode}> </Switch>
         </HStack>
     );

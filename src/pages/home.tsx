@@ -1,5 +1,6 @@
-import { Flex, SimpleGrid, Box, Text, Divider, Stack, Button, Switch, useColorMode, useColorModeValue } from '@chakra-ui/react'
+import { Flex, SimpleGrid, Box, Text, Divider, Stack, Button, IconButton, useColorMode, useColorModeValue } from '@chakra-ui/react'
 import { useState } from 'react';
+import { RiGithubFill } from 'react-icons/ri';
 import { Header } from '../components/Header'
 import { Sidebar } from '../components/Sidebar'
 
@@ -75,13 +76,17 @@ export default function Home() {
                             <Box>
                                 <Text as="span" color={color} fontWeight="500" fontSize={22}>core functions:</Text>
                                 <Text color={color}>
-                                    this one
-                                    <Stack direction="row">
-                                        <Switch colorScheme="red" size="lg" onChange={toggleColorMode}> </Switch>
-                                    </Stack>
+                                    shared the code of this project with other devs that are looking for a portfolio
                                 </Text>
                             </Box>
-                            <Button>SAIBA MAIS</Button>
+                            <IconButton
+                                variant="outline"
+                                borderColor="gray.400"
+                                aria-label="Call Sage"
+                                fontSize={30}
+                                icon={<RiGithubFill color={color} />}
+                                _hover={{ background: 'red.500', color: 'black.500', borderColor: 'black', fontColor: 'black' }}
+                            />
                         </Stack>
                     </Box>
                 </SimpleGrid>

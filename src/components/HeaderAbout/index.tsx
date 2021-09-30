@@ -1,11 +1,10 @@
-import { Flex, useBreakpointValue, IconButton, Icon } from '@chakra-ui/react'
-import { Profile } from './Profile';
+import { Flex, useBreakpointValue, IconButton, Icon, Text } from '@chakra-ui/react'
 import { NotificationsNav } from './NotificationsNav';
-import { Logo } from './Logo';
+import { Logo } from '../Header/Logo';
 import { useSidebarDrawer } from '../../contexts/SidebarDrawerContext';
 import { RiMenuLine } from 'react-icons/ri';
 
-export function Header() {
+export function HeaderAbout() {
     const { onOpen } = useSidebarDrawer();
 
     const isWideVersion = useBreakpointValue({
@@ -31,9 +30,9 @@ export function Header() {
 
                 <NotificationsNav />
 
-                <Profile showProfileData={isWideVersion} />
 
             </Flex>
+            <Text fontSize={28} fontWeight="bold">Eduardo Sohne</Text>
         </Flex>
     )
 }
