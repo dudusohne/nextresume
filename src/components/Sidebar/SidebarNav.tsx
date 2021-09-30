@@ -14,7 +14,7 @@ export function SidebarNav() {
             align="flex-start"
         >
             <NavSection title="GENERAL">
-                <NavLink icon={RiDashboardLine} href="/home">Projetos</NavLink>
+                <NavLink icon={RiDashboardLine} href="/home">Projects</NavLink>
                 <NavLink icon={RiContactsLine} href="/about">About</NavLink>
             </NavSection>
 

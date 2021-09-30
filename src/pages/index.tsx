@@ -8,7 +8,7 @@ export default function SignIn() {
 
     <Flex w="100vw" h="100vh" align="center" justify="center" direction="column" bg="white">
       <Text fontSize={18} fontWeight="500" letterSpacing="tight" w="50" h="5" color="red.500" mb="8">UNDER CONSTRUCTION</Text>
-      <Flex as="form" w="100%" maxWidth={360} bg="gray.100" padding="8" borderRadius={8} flexDir="column" borderColor="gray.300" borderWidth={1}>
+      <Flex as="form" w="100%" maxWidth={360} bg="white   " padding="8" borderRadius={8} flexDir="column" borderColor="gray.300" borderWidth={1}>
 
         <Flex justify="space-between" align="center" px="2">
           <Stack spacing="5">
@@ -23,8 +23,8 @@ export default function SignIn() {
           </Stack>
 
           <Flex direction="column">
-            <Avatar size="2xl" name="Eduardo Sohne" src="https://avatars.githubusercontent.com/u/19408694?v=4"  borderWidth={3} />
-            <Button type="button" mt="4" fontWeight="bold" bgColor="black" size="md" onClick={() => router.push(`/home`)}>ACCESS</Button>
+            <Avatar size="2xl" name="Eduardo Sohne" src="https://avatars.githubusercontent.com/u/19408694?v=4"  borderWidth={3} borderColor="orange.400"/>
+            <Button type="button" mt="4" fontWeight="bold" bgColor="black" size="md" onClick={() => router.push(`/home`)} _hover={{background: 'orange.400'}}>ACCESS</Button>
           </Flex>
         </Flex>
 
