@@ -49,7 +49,12 @@ export default function Home() {
                                         bg="teal.500"
                                         rounded="md"
                                         shadow="md"
+                                        justify="center"
+                                        align="center"
                                     >
+                                        <Button w={103}>button 1</Button>
+                                        <Button w={103}>button 2</Button>
+                                        <Button w={103}>button 3</Button>
                                         <Image src="" boxSize="" alt="" />
                                     </Box>
                                 </SlideFade>
