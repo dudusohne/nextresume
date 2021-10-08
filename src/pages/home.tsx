@@ -2,6 +2,7 @@ import { Flex, SimpleGrid, Box, Text, Divider, Stack, Button, IconButton, useCol
 import { RiGithubFill } from 'react-icons/ri'
 import { Header } from '../components/Header'
 import { Sidebar } from '../components/Sidebar'
+import casaImg1 from '../assets/casa1.png';
 
 export default function Home() {
     const { colorMode, toggleColorMode } = useColorMode()
@@ -52,10 +53,6 @@ export default function Home() {
                                         justify="center"
                                         align="center"
                                     >
-                                        <Button w={103}>button 1</Button>
-                                        <Button w={103}>button 2</Button>
-                                        <Button w={103}>button 3</Button>
-                                        <Image src="" boxSize="" alt="" />
                                     </Box>
                                 </SlideFade>
                             </Stack>
