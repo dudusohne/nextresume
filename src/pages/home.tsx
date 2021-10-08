@@ -1,6 +1,5 @@
-import { Flex, SimpleGrid, Box, Text, Divider, Stack, Button, IconButton, useColorMode, useColorModeValue, useDisclosure, SlideFade } from '@chakra-ui/react'
-import { useState } from 'react';
-import { RiGithubFill } from 'react-icons/ri';
+import { Flex, SimpleGrid, Box, Text, Divider, Stack, Button, IconButton, useColorMode, useColorModeValue, useDisclosure, SlideFade, Image } from '@chakra-ui/react'
+import { RiGithubFill } from 'react-icons/ri'
 import { Header } from '../components/Header'
 import { Sidebar } from '../components/Sidebar'
 
@@ -51,7 +50,7 @@ export default function Home() {
                                         rounded="md"
                                         shadow="md"
                                     >
-                                        <p>teste</p>
+                                        <Image src="" boxSize="" alt="" />
                                     </Box>
                                 </SlideFade>
                             </Stack>

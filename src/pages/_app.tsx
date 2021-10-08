@@ -5,11 +5,13 @@ import { SidebarDrawerProvider } from '../contexts/SidebarDrawerContext';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
+
     <ChakraProvider resetCSS theme={theme}>
       <SidebarDrawerProvider>
         <Component {...pageProps} />
       </SidebarDrawerProvider>
     </ChakraProvider>
+    
   )
 }
 
