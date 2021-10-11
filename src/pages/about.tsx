@@ -17,7 +17,7 @@ export default function About() {
                 <Sidebar />
                 <Box flex="1" borderRadius={8} p="8" borderWidth={1} borderColor="gray.400" bg={color2}>
                     <Flex mb="8" justify="space-between" align="center">
-                        <Heading size="lg" fontWeight="normal" color={color}>About Me</Heading>
+                        <Heading fontSize={28} fontWeight="400" color={color} fontStyle="italic">About Me</Heading>
                         <Avatar size="lg" name="Eduardo Sohne" src="https://avatars.githubusercontent.com/u/19408694?v=4" />
                     </Flex>
                     <AboutData />
