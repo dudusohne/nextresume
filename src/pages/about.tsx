@@ -19,6 +19,7 @@ export default function About() {
                         <Avatar size="lg" name="Eduardo Sohne" src="https://avatars.githubusercontent.com/u/19408694?v=4" />
                     </Flex>
                     <AboutData />
+                    <AboutData />
                 </Box>
             </Flex>
         </Box>

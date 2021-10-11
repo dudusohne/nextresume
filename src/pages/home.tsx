@@ -57,7 +57,7 @@ export default function Home() {
                                 </SlideFade>
                             </Stack>
                         </Box>
-                        <Box p="8" borderRadius={8} borderWidth={1} borderColor="gray.300" transition="0.4s ease" _hover={{ borderColor: 'red.300' }}>
+                        <Box p="8" borderRadius={8} borderWidth={1} borderColor={border} transition="0.4s ease" _hover={{ borderColor: 'red.300' }}>
                             <Stack spacing="4">
                                 <Box>
                                     <Text as="span" color={color} fontWeight="bold" fontSize={30}>ACTIVE SALES</Text>
@@ -79,7 +79,7 @@ export default function Home() {
                                 <Button>SEE MORE</Button>
                             </Stack>
                         </Box>
-                        <Box p="8" borderRadius={8} borderWidth={1} borderColor="gray.300" transition="0.4s ease" _hover={{ borderColor: 'red.300' }}>
+                        <Box p="8" borderRadius={8} borderWidth={1} borderColor={border} transition="0.4s ease" _hover={{ borderColor: 'red.300' }}>
                             <Stack spacing="4">
                                 <Box>
                                     <Text as="span" color={color} fontWeight="bold" fontSize={30}>NEXTRESUME</Text>
