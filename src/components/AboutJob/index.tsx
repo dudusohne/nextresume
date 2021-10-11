@@ -1,6 +1,6 @@
 import { Text, useColorModeValue, Grid, GridItem, Box } from '@chakra-ui/react';
 
-export function AboutData() {
+export function AboutJob() {
 
     const bg = useColorModeValue("gray.200", "gray.800")
     const text = useColorModeValue("gray.800", "gray.200")
