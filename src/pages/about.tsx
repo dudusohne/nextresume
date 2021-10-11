@@ -3,6 +3,7 @@ import { HeaderAbout } from '../components/HeaderAbout';
 import { Sidebar } from '../components/Sidebar';
 import { SiJavascript } from 'react-icons/si';
 import { Pagination } from '../components/Pagination';
+import { AboutData } from '../components/AboutData';
 
 export default function About() {
 
@@ -17,6 +18,7 @@ export default function About() {
                         <Heading size="lg" fontWeight="normal" color="black">About Me</Heading>
                         <Avatar size="lg" name="Eduardo Sohne" src="https://avatars.githubusercontent.com/u/19408694?v=4" />
                     </Flex>
+                    <AboutData />
                 </Box>
             </Flex>
         </Box>
