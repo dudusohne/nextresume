@@ -2,7 +2,6 @@ import { Flex, SimpleGrid, Box, Text, Divider, Stack, Button, IconButton, useCol
 import { RiGithubFill } from 'react-icons/ri'
 import { Header } from '../components/Header'
 import { Sidebar } from '../components/Sidebar'
-import casaImg1 from '../assets/casa1.png';
 import { BottomSlideContent } from '../components/BottomSlideContent';
 
 export default function Home() {
