@@ -1,8 +1,9 @@
-import { Flex, SimpleGrid, Box, Text, Divider, Stack, Button, IconButton, useColorMode, useColorModeValue, useDisclosure, SlideFade, Image } from '@chakra-ui/react'
+import { Flex, SimpleGrid, Box, Text, Divider, Stack, Button, IconButton, useColorMode, useColorModeValue, useDisclosure, Slide, Link, Popover, PopoverTrigger, PopoverContent, PopoverArrow, PopoverHeader, PopoverCloseButton, PopoverBody } from '@chakra-ui/react'
 import { RiGithubFill } from 'react-icons/ri'
 import { Header } from '../components/Header'
 import { Sidebar } from '../components/Sidebar'
 import casaImg1 from '../assets/casa1.png';
+import { BottomSlideContent } from '../components/BottomSlideContent';
 
 export default function Home() {
     const { colorMode, toggleColorMode } = useColorMode()
@@ -40,21 +41,12 @@ export default function Home() {
                                     </Text>
                                 </Box>
                                 <Button onClick={onToggle}>{isOpen ? 'CLOSE' : 'SEE MORE'}</Button>
-                                <SlideFade in={isOpen} offsetY="20px">
-                                    <Box
-                                        z-index="2"
-                                        w="100%"
-                                        h="355"
-                                        color="white"
-                                        mt={-415}
-                                        bg="teal.500"
-                                        rounded="md"
-                                        shadow="md"
-                                        justify="center"
-                                        align="center"
-                                    >
+                                <Slide in={isOpen} direction="bottom" style={{ zIndex: 10 }}>
+                                    <Box p="40px" color="white" h="450px" mt="4" bg="teal.500" rounded="md" shadow="md">
+                                        <Button onClick={onToggle} mt={-10} bg="red" _hover={{ bgColor: 'black', color: 'white' }}>CLOSE</Button>
+                                        <BottomSlideContent />
                                     </Box>
-                                </SlideFade>
+                                </Slide>
                             </Stack>
                         </Box>
                         <Box p="8" borderRadius={8} borderWidth={1} borderColor={border} transition="0.4s ease" _hover={{ borderColor: 'red.300' }}>
@@ -76,7 +68,17 @@ export default function Home() {
                                         sku ranking, saler ranking and more data measures.
                                     </Text>
                                 </Box>
-                                <Button>SEE MORE</Button>
+                                <Popover>
+                                    <PopoverTrigger>
+                                        <Button>SEE MORE</Button>
+                                    </PopoverTrigger>
+                                    <PopoverContent>
+                                        <PopoverArrow />
+                                        <PopoverCloseButton />
+                                        <PopoverHeader>Atention!</PopoverHeader>
+                                        <PopoverBody>Project content is unvaliable at the moment!</PopoverBody>
+                                    </PopoverContent>
+                                </Popover>
                             </Stack>
                         </Box>
                         <Box p="8" borderRadius={8} borderWidth={1} borderColor={border} transition="0.4s ease" _hover={{ borderColor: 'red.300' }}>
@@ -96,14 +98,16 @@ export default function Home() {
                                         shared the code of this project with other devs that are looking for a portfolio
                                     </Text>
                                 </Box>
-                                <IconButton
-                                    variant="outline"
-                                    borderColor="gray.400"
-                                    aria-label="Call Sage"
-                                    fontSize={30}
-                                    icon={<RiGithubFill color={color} />}
-                                    _hover={{ background: 'red.500', color: 'black.500', borderColor: 'black', fontColor: 'black' }}
-                                />
+                                <Link href="https://github.com/dudusohne/nextresume" target="_blank">
+                                    <IconButton
+                                        variant="outline"
+                                        borderColor="gray.400"
+                                        aria-label="Call Sage"
+                                        fontSize={30}
+                                        icon={<RiGithubFill color={color} />}
+                                        _hover={{ background: 'red.500', color: 'black.500', borderColor: 'black', fontColor: 'black' }}
+                                    />
+                                </Link>
                             </Stack>
                         </Box>
                     </SimpleGrid>
