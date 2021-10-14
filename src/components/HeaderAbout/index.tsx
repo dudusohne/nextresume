@@ -15,16 +15,16 @@ export function HeaderAbout() {
     return (
         <Flex as="header" w="100%" maxWidth={1480} h="20" mx="auto" mt="4" px="6" align="center">
             {!isWideVersion && (
-                <Link href="https://api.whatsapp.com/send?phone=5551997951166" target="_blank">
-                    <IconButton
-                        aria-label="Open menu"
-                        icon={<Icon as={RiMenuLine} />}
-                        fontSize="24"
-                        variant="unstyled"
-                        onClick={onOpen}
-                        mr="2"
-                    ></IconButton>
-                </Link>
+
+                <IconButton
+                    aria-label="Open menu"
+                    icon={<Icon as={RiMenuLine} />}
+                    fontSize="24"
+                    variant="unstyled"
+                    onClick={onOpen}
+                    mr="2"
+                ></IconButton>
+
             )}
             <Logo />
 

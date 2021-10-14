@@ -1,10 +1,10 @@
-import { Flex, Icon, HStack, IconButton, Switch, useColorMode } from '@chakra-ui/react';
+import { Flex, Link, HStack, IconButton, Switch, useColorMode } from '@chakra-ui/react';
 import { RiWhatsappFill, RiUserAddLine } from 'react-icons/ri'
 import { MdPhone } from 'react-icons/md'
 
 export function NotificationsNav() {
     const { colorMode, toggleColorMode } = useColorMode()
-    
+
 
     return (
         <HStack
@@ -16,15 +16,17 @@ export function NotificationsNav() {
             borderRightWidth={1}
             borderColor="gray.700"
         >
-            <IconButton
-                variant="outline"
-                borderColor="gray.400"
-                aria-label="Call Sage"
-                fontSize="20px"
-                icon={<RiWhatsappFill color="gray" />}
-                transition="0.5s"
-                _hover={{ background: 'red.300', color: 'gray.600' }}
-            />
+            <Link href="https://api.whatsapp.com/send?phone=5551997951166" target="_blank">
+                <IconButton
+                    variant="outline"
+                    borderColor="gray.400"
+                    aria-label="Call Sage"
+                    fontSize="20px"
+                    icon={<RiWhatsappFill color="gray" />}
+                    transition="0.5s"
+                    _hover={{ background: 'red.300', color: 'gray.600' }}
+                />
+            </Link>
             <Switch colorScheme="red" size="md" onChange={toggleColorMode}> </Switch>
         </HStack>
     );
