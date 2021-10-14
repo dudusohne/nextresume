@@ -30,6 +30,8 @@ export default function About() {
                         <Flex direction="row">
                             <Box bg={bg} maxWidth={540} borderRadius={12} p="4">
                                 <Text>Carrer Goals</Text>
+                                <Text>Carrer Goals</Text>
+                                <Text>Carrer Goals</Text>
                             </Box>
                         </Flex>
                     </Stack>
