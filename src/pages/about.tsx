@@ -2,6 +2,7 @@ import { Box, Flex, Heading, Avatar, useColorModeValue, Stack, Text } from '@cha
 import { HeaderAbout } from '../components/HeaderAbout';
 import { Sidebar } from '../components/Sidebar';
 import { AboutJob } from '../components/AboutJob';
+import { AboutOtherJob } from '../components/AboutOtherJob';
 import { TechData } from '../components/TechData';
 
 
@@ -28,11 +29,10 @@ export default function About() {
                             <TechData />
                         </Flex>
                         <Flex direction="row">
-                            <Box bg={bg} maxWidth={540} borderRadius={12} p="4">
-                                <Text>Carrer Goals</Text>
-                                <Text>Carrer Goals</Text>
-                                <Text>Carrer Goals</Text>
-                            </Box>
+                            <AboutOtherJob />
+                        </Flex>
+                        <Flex direction="row">
+                            <Text></Text>
                         </Flex>
                     </Stack>
                 </Box>

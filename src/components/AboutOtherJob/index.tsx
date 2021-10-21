@@ -1,6 +1,6 @@
 import { Text, useColorModeValue, Grid, GridItem, Box } from '@chakra-ui/react';
 
-export function AboutJob() {
+export function AboutOtherJob() {
 
     const bg = useColorModeValue("gray.200", "gray.800")
     const text = useColorModeValue("gray.800", "gray.200")
@@ -15,9 +15,9 @@ export function AboutJob() {
             >
                 <GridItem colSpan={1} rowSpan={1}>
                     <Text as="span" fontSize={16} fontWeight="bold" color={text}>
-                        Fulltime Job:
+                        Pertime Job:    
                         <Text as="p" fontSize={22} fontWeight="normal">
-                            Developer
+                            Front-end Developer
                         </Text>
                     </Text>
                 </GridItem>
@@ -25,7 +25,7 @@ export function AboutJob() {
                     <Text as="span" fontSize={16} fontWeight="bold" color={text}>
                         Company:
                         <Text as="p" fontSize={22} fontWeight="normal">
-                            Smart Marketing Digital
+                            EdubraHub
                         </Text>
                     </Text>
                 </GridItem>
@@ -33,7 +33,7 @@ export function AboutJob() {
                     <Text as="span" fontSize={16} fontWeight="bold" color={text}>
                         Period:
                         <Text as="p" fontSize={22} fontWeight="normal">
-                            03/2021 - Present
+                            09/2021 - Present
                         </Text>
                     </Text>
                 </GridItem>
@@ -41,7 +41,7 @@ export function AboutJob() {
                     <Text as="span" fontSize={16} fontWeight="bold" color={text}>
                         Role:
                         <Text as="p" fontSize={22} fontWeight="normal">
-                            Web Developer
+                            React Developer
                         </Text>
                     </Text>
                 </GridItem>
