@@ -11,7 +11,6 @@ export default function About() {
     const color2 = useColorModeValue("gray.800", "gray.200")
     const bg = useColorModeValue("gray.200", "gray.800")
 
-
     return (
         <Box>
             <HeaderAbout />
