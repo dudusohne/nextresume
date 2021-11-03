@@ -29,7 +29,7 @@ export default function Home() {
                                 </Box>
                                 <Box>
                                     <Text as="span" color={color} fontWeight="600" fontSize={22}>tools and techs:</Text>
-                                    <Text color={color}>react, typescript, firebase and sass</Text>
+                                    <Text color={color}>react, typescript, firebase and sass.</Text>
                                 </Box>
                                 <Box>
                                     <Text as="span" color={color} fontWeight="600" fontSize={22}>core functions:</Text>
