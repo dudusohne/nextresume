@@ -12,12 +12,4 @@ export const theme = extendTheme({
         heading: 'Roboto',
         body: 'Roboto',
     },
-    // styles: {
-    //     global: {
-    //         body: {
-    //             bg: 'gray.200',
-    //             color: 'gray.50',
-    //         }
-    //     }
-    // }
 })
