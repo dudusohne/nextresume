@@ -12,13 +12,14 @@ export function Sidebar() {
         lg: false
     })
 
-    const color = useColorModeValue("gray.500", "gray.700")
+    const color = useColorModeValue("gray.500", "gray.500")
+    const backgroundSidebar = useColorModeValue("gray.50", "gray.900")
 
     if (isDrawerSidebar) {
         return (
             <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
                 <DrawerOverlay>
-                    <DrawerContent bg="gray.900" p="4">
+                    <DrawerContent bg={backgroundSidebar} p="4">
                         <DrawerCloseButton background={color} mt="2" />
                         <DrawerBody>
                             <SidebarNav />
