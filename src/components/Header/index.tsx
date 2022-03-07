@@ -4,10 +4,7 @@ import { NotificationsNav } from './NotificationsNav';
 import { Logo } from './Logo';
 import { useSidebarDrawer } from '../../contexts/SidebarDrawerContext';
 import { RiMenuLine } from 'react-icons/ri';
-
-interface HeaderProps {
-    withProfile?: boolean;
-}
+import { HeaderProps } from '../../Interface/interface';
 
 export function Header({ withProfile = false }: HeaderProps) {
     const { onOpen } = useSidebarDrawer();

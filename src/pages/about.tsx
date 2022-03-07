@@ -1,27 +1,21 @@
-import { Box, Flex, Heading, Avatar, useColorModeValue, Stack, Text } from '@chakra-ui/react';
+import { Flex, useColorModeValue, Stack, Text } from '@chakra-ui/react';
 import { Sidebar } from '../components/Sidebar';
 import { AboutJob } from '../components/AboutJob';
-import { AboutOtherJob } from '../components/AboutOtherJob';
 import { TechData } from '../components/TechData';
 import { Header } from '../components/Header';
 
-
 export default function About() {
     const color = useColorModeValue("gray.200", "gray.800")
-    const color2 = useColorModeValue("gray.800", "gray.200")
+    const text = useColorModeValue("gray.800", "gray.200")
     const bg = useColorModeValue("gray.200", "gray.800")
 
     return (
-        <Box>
+        <Flex direction="column" h="100vh">
             <Header />
-
             <Flex w="100%" my="6" maxWidth={1480} mx="auto" px="6">
                 <Sidebar />
-                <Box flex="1" borderRadius={8} p="8" borderWidth={1} borderColor="gray.400" bg={color2}>
-                    <Flex mb="8" justify="space-between" align="center">
-                        <Heading fontSize={28} fontWeight="400" color={color} fontStyle="italic">About Me</Heading>
-                        <Avatar size="lg" name="Eduardo Sohne" src="https://avatars.githubusercontent.com/u/19408694?v=4" />
-                    </Flex>
+                <Flex direction="column">
+                    <Text as="span" fontSize={22} fontWeight="bold" color={text} mb="5">ABOUT ME</Text>
                     <Stack spacing="4">
                         <Flex direction="row">
                             <AboutJob
@@ -35,7 +29,7 @@ export default function About() {
                         <Flex direction="row">
                             <AboutJob
                                 job="Pertime Job"
-                                company="Eubrahub"
+                                company="Edubrahub"
                                 period="09/2021 - 11/2021"
                                 role="Web Developer"
                             />
@@ -51,8 +45,8 @@ export default function About() {
                             <TechData />
                         </Flex>
                     </Stack>
-                </Box>
+                </Flex>
             </Flex>
-        </Box>
+        </Flex>
     )
 }

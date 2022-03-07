@@ -1,14 +1,5 @@
 import { Box, Stack, Text, Button, useColorModeValue, Divider } from "@chakra-ui/react";
-
-interface ProjectBoxProps {
-    title?: string;
-    subtitle?: string;
-    tools?: string;
-    description?: string;
-    buttonText?: string;
-    onClick?: () => void;
-    children?: React.ReactNode;
-}
+import { ProjectBoxProps } from "../../Interface/interface";
 
 export function ProjectBox({ title, subtitle, tools, description, buttonText, children, onClick }: ProjectBoxProps) {
     const bg = useColorModeValue("gray.50", "gray.900")
@@ -16,7 +7,7 @@ export function ProjectBox({ title, subtitle, tools, description, buttonText, ch
     const border = useColorModeValue("gray.200", "gray.300")
 
     return (
-        <Box p="8" borderRadius={8} borderWidth={1} borderColor={border} transition="0.4s ease" background={bg} _hover={{ borderColor: 'red.300', borderRadius: '30px' }}>
+        <Box p="8" borderRadius={8} borderWidth={1} borderColor={border} transition="0.4s ease" background={bg} _hover={{ borderColor: 'red.300', borderRadius: '30px', background: 'gray.800' }}>
             <Stack spacing="4">
                 <Box>
                     <Text as="span" color={color} fontWeight="bold" fontSize={30}>{title}</Text>

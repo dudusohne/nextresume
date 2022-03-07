@@ -6,9 +6,7 @@ import { NavSection } from './NavSection'
 
 export function SidebarNav() {
 
-
     return (
-
         <Stack
             spacing="12"
             align="flex-start"
@@ -23,6 +21,5 @@ export function SidebarNav() {
                 <NavLink icon={RiLinkedinBoxFill} href="https://www.linkedin.com/in/eduardo-sohne-62a183118/" target="_blank">Linkedin</NavLink>
             </NavSection>
         </Stack >
-
     );
 }

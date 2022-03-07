@@ -11,8 +11,6 @@ export function NotificationsNav() {
                 paddingRight={["6", "8"]}
                 py="1"
                 color="gray.300"
-                borderRightWidth={1}
-                borderColor="gray.700"
             >
                 <Link href="https://api.whatsapp.com/send?phone=5551997951166" target="_blank">
                     <IconButton
