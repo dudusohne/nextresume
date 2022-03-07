@@ -10,7 +10,7 @@ interface ActiveLinkProps extends LinkProps {
 
 export function ActiveLink({ children, shouldMatchExactHref = false, ...rest }: ActiveLinkProps) {
     const { asPath } = useRouter()
-    const color = useColorModeValue("gray.800", "gray.200")
+    const color = useColorModeValue("gray.200", "gray.200")
     
     let isActive = false;
 

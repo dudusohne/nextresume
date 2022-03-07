@@ -1,12 +1,19 @@
 import { Text, useColorModeValue, Grid, GridItem, Box } from '@chakra-ui/react';
 
-export function AboutJob() {
+interface Props {
+    job: string;
+    company: string;
+    period: string;
+    role: string;
+}
+
+export function AboutJob({ job, company, period, role }: Props) {
 
     const bg = useColorModeValue("gray.200", "gray.800")
     const text = useColorModeValue("gray.800", "gray.200")
 
     return (
-        
+
         <Box bg={bg} maxWidth={540} borderRadius={12} p="4">
             <Grid
                 templateRows="repeat(2, 1fr)"
@@ -15,9 +22,9 @@ export function AboutJob() {
             >
                 <GridItem colSpan={1} rowSpan={1}>
                     <Text as="span" fontSize={16} fontWeight="bold" color={text}>
-                        Fulltime Job:
+                        Job:
                         <Text as="p" fontSize={22} fontWeight="normal">
-                            Developer
+                            {job}
                         </Text>
                     </Text>
                 </GridItem>
@@ -25,7 +32,7 @@ export function AboutJob() {
                     <Text as="span" fontSize={16} fontWeight="bold" color={text}>
                         Company:
                         <Text as="p" fontSize={22} fontWeight="normal">
-                            Smart Marketing Digital
+                            {company}
                         </Text>
                     </Text>
                 </GridItem>
@@ -33,7 +40,7 @@ export function AboutJob() {
                     <Text as="span" fontSize={16} fontWeight="bold" color={text}>
                         Period:
                         <Text as="p" fontSize={22} fontWeight="normal">
-                            03/2021 - Present
+                            {period}
                         </Text>
                     </Text>
                 </GridItem>
@@ -41,7 +48,7 @@ export function AboutJob() {
                     <Text as="span" fontSize={16} fontWeight="bold" color={text}>
                         Role:
                         <Text as="p" fontSize={22} fontWeight="normal">
-                            Web Developer
+                            {role}
                         </Text>
                     </Text>
                 </GridItem>

@@ -9,8 +9,8 @@ interface NavLinkProps extends ChakraLinkProps {
 }
 
 export function NavLink({ children, icon, href, ...rest }: NavLinkProps) {
+    
     return (
-        // eslint-disable-next-line @next/next/link-passhref
         <ActiveLink href={href} passHref>
             <ChakraLink display="flex" align="center"{...rest}>
                 <Icon as={icon} fontSize="20" />

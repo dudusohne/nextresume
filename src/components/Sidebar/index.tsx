@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, useBreakpointValue } from '@chakra-ui/react'
+import { Box, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, useBreakpointValue, useColorModeValue } from '@chakra-ui/react'
 
 import { SidebarNav } from './SidebarNav'
 import { useSidebarDrawer } from '../../contexts/SidebarDrawerContext'
@@ -12,13 +12,14 @@ export function Sidebar() {
         lg: false
     })
 
+    const color = useColorModeValue("gray.500", "gray.700")
+
     if (isDrawerSidebar) {
         return (
             <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
                 <DrawerOverlay>
                     <DrawerContent bg="gray.900" p="4">
-                        <DrawerCloseButton mt="6" />
-                        <DrawerHeader>Menu</DrawerHeader>
+                        <DrawerCloseButton background={color} mt="2" />
                         <DrawerBody>
                             <SidebarNav />
                         </DrawerBody>

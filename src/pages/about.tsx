@@ -1,9 +1,9 @@
 import { Box, Flex, Heading, Avatar, useColorModeValue, Stack, Text } from '@chakra-ui/react';
-import { HeaderAbout } from '../components/HeaderAbout';
 import { Sidebar } from '../components/Sidebar';
 import { AboutJob } from '../components/AboutJob';
 import { AboutOtherJob } from '../components/AboutOtherJob';
 import { TechData } from '../components/TechData';
+import { Header } from '../components/Header';
 
 
 export default function About() {
@@ -13,7 +13,7 @@ export default function About() {
 
     return (
         <Box>
-            <HeaderAbout />
+            <Header />
 
             <Flex w="100%" my="6" maxWidth={1480} mx="auto" px="6">
                 <Sidebar />
@@ -24,14 +24,31 @@ export default function About() {
                     </Flex>
                     <Stack spacing="4">
                         <Flex direction="row">
-                            <AboutJob />
+                            <AboutJob
+                                job="Fulltime Job"
+                                company="Smart Marketing Digital"
+                                period="03/2021 - 11/2021"
+                                role="Web Developer"
+                            />
                             <TechData />
                         </Flex>
                         <Flex direction="row">
-                            <AboutOtherJob />
+                            <AboutJob
+                                job="Pertime Job"
+                                company="Eubrahub"
+                                period="09/2021 - 11/2021"
+                                role="Web Developer"
+                            />
+                            <TechData />
                         </Flex>
                         <Flex direction="row">
-                            <Text></Text>
+                            <AboutJob
+                                job="Fulltime Job"
+                                company="Simbiose Ventures"
+                                period="11/2021 - present"
+                                role="FullStack Developer"
+                            />
+                            <TechData />
                         </Flex>
                     </Stack>
                 </Box>
