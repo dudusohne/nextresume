@@ -30,7 +30,7 @@ export default function About() {
                             <AboutJob
                                 job="Pertime Job"
                                 company="Edubrahub"
-                                period="09/2021 - 11/2021"
+                                period="09/2021 - 12/2021"
                                 role="Web Developer"
                             />
                             <TechData />

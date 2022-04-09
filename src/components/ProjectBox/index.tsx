@@ -1,4 +1,4 @@
-import { Box, Stack, Text, Button, useColorModeValue, Divider } from "@chakra-ui/react";
+import { Box, Stack, Text, Button, useColorModeValue, Divider, Flex } from "@chakra-ui/react";
 import { ProjectBoxProps } from "../../Interface/interface";
 
 export function ProjectBox({ title, subtitle, tools, description, buttonText, children, onClick }: ProjectBoxProps) {
@@ -23,9 +23,13 @@ export function ProjectBox({ title, subtitle, tools, description, buttonText, ch
                     <Text color={color}>
                         {description}
                     </Text>
-                    {children}
+                    <Flex mt="2">
+                        {children}
+                    </Flex>
                 </Box>
-                <Button onClick={onClick}>{buttonText}</Button>
+                {buttonText ?
+                    <Button onClick={onClick}>{buttonText}</Button>
+                    : ''}
             </Stack>
         </Box>
     )
