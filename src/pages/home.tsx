@@ -19,62 +19,67 @@ export default function Home() {
             <Flex w="100%" my="6" maxWidth={1480} mx="auto" px="6">
                 <Sidebar />
                 <Flex direction="column">
-                    <Text as="span" fontSize={22} fontWeight="bold" color={color} mb="5">PROJECTS</Text>
-                    <SimpleGrid flex="1" gap="4" minChildWidth={320} align="flex-start" columns={3}>
-                        <ProjectBox
-                            title="BAR TABS"
-                            subtitle="this project has a purpose of managing stock, tabs and sales for a pub."
-                            tools="react, typescript, firebase and sass."
-                            description="access only by auth with firebase,
+                    <Flex>
+                        <Text as="span" fontSize={22} fontWeight="bold" color={color} mb="5">PROJECTS</Text>
+                        <SimpleGrid flex="1" gap="4" minChildWidth={320} align="flex-start" columns={3}>
+                            <ProjectBox
+                                title="BAR TABS"
+                                subtitle="this project has a purpose of managing stock, tabs and sales for a pub."
+                                tools="react, typescript, firebase and sass."
+                                description="access only by auth with firebase,
                             realtime tabs-viewer with react hooks and realtime database,
                             product inventory, daily and monthly cash-closer dashboard."
-                        >
-                            <Link href="https://github.com/dudusohne/casalibre" target="_blank">
-                                <IconButton
-                                    variant="outline"
-                                    borderColor="gray.400"
-                                    aria-label="Call Sage"
-                                    fontSize={30}
-                                    icon={<RiGithubFill color={color} />}
-                                    _hover={{ background: 'red.500', color: 'black.500', borderColor: 'black', fontColor: 'black' }}
-                                />
-                            </Link>
-                        </ProjectBox>
-                        <ProjectBox
-                            title="THIS RESUME"
-                            subtitle="this project has a purpose of show my personal portfolio."
-                            tools="next, typescript and chakra.ui"
-                            description="shared the code of this project with other devs that are looking for a portfolio"
-                        >
-                            <Link href="https://github.com/dudusohne/nextresume" target="_blank">
-                                <IconButton
-                                    variant="outline"
-                                    borderColor="gray.400"
-                                    aria-label="Call Sage"
-                                    fontSize={30}
-                                    icon={<RiGithubFill color={color} />}
-                                    _hover={{ background: 'red.500', color: 'black.500', borderColor: 'black', fontColor: 'black' }}
-                                />
-                            </Link>
-                        </ProjectBox>
-                        <ProjectBox
-                            title="POKEMON DESK"
-                            subtitle="make your own pokemon team."
-                            tools="vue 3, composition api, typescript and quasar"
-                            description="its a simple vue project that calls an pokemon api"
-                        >
-                            <Link href="https://github.com/dudusohne/pokemon-desk-team" target="_blank">
-                                <IconButton
-                                    variant="outline"
-                                    borderColor="gray.400"
-                                    aria-label="Call Sage"
-                                    fontSize={30}
-                                    icon={<RiGithubFill color={color} />}
-                                    _hover={{ background: 'red.500', color: 'black.500', borderColor: 'black', fontColor: 'black' }}
-                                />
-                            </Link>
-                        </ProjectBox>
-                    </SimpleGrid>
+                            >
+                                <Link href="https://github.com/dudusohne/casalibre" target="_blank">
+                                    <IconButton
+                                        variant="outline"
+                                        borderColor="gray.400"
+                                        aria-label="Call Sage"
+                                        fontSize={30}
+                                        icon={<RiGithubFill color={color} />}
+                                        _hover={{ background: 'red.500', color: 'black.500', borderColor: 'black', fontColor: 'black' }}
+                                    />
+                                </Link>
+                            </ProjectBox>
+                            <ProjectBox
+                                title="THIS RESUME"
+                                subtitle="this project has a purpose of show my personal portfolio."
+                                tools="next, typescript and chakra.ui"
+                                description="shared the code of this project with other devs that are looking for a portfolio"
+                            >
+                                <Link href="https://github.com/dudusohne/nextresume" target="_blank">
+                                    <IconButton
+                                        variant="outline"
+                                        borderColor="gray.400"
+                                        aria-label="Call Sage"
+                                        fontSize={30}
+                                        icon={<RiGithubFill color={color} />}
+                                        _hover={{ background: 'red.500', color: 'black.500', borderColor: 'black', fontColor: 'black' }}
+                                    />
+                                </Link>
+                            </ProjectBox>
+                            <ProjectBox
+                                title="POKEMON DESK"
+                                subtitle="make your own pokemon team."
+                                tools="vue 3, composition api, typescript and quasar"
+                                description="its a simple vue project that calls an pokemon api"
+                            >
+                                <Link href="https://github.com/dudusohne/pokemon-desk-team" target="_blank">
+                                    <IconButton
+                                        variant="outline"
+                                        borderColor="gray.400"
+                                        aria-label="Call Sage"
+                                        fontSize={30}
+                                        icon={<RiGithubFill color={color} />}
+                                        _hover={{ background: 'red.500', color: 'black.500', borderColor: 'black', fontColor: 'black' }}
+                                    />
+                                </Link>
+                            </ProjectBox>
+                        </SimpleGrid>
+                    </Flex>
+                    <Flex>
+                        <Text as="span" fontSize={22} fontWeight="bold" color={color} mb="5">WORK STACK</Text>
+                    </Flex>
                 </Flex>
             </Flex>
         </Flex>
