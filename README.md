@@ -1,4 +1,4 @@
-### -- nextresume --
+### NEXTresume
 
 this is a project to serve as a model to devs build they own professional portfolio.
 
