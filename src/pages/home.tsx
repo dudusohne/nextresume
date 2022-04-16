@@ -1,9 +1,14 @@
 import { Flex, SimpleGrid, Box, Text, Divider, Stack, Button, IconButton, useColorMode, useColorModeValue, useDisclosure, Slide, Link, Popover, PopoverTrigger, PopoverContent, PopoverArrow, PopoverHeader, PopoverCloseButton, PopoverBody } from '@chakra-ui/react'
-import { RiGithubFill } from 'react-icons/ri'
 import { Header } from '../components/Header'
 import { Sidebar } from '../components/Sidebar'
 import { BottomSlideContent } from '../components/BottomSlideContent';
 import { ProjectBox } from '../components/ProjectBox';
+import { MiniCard } from '../MiniCard/MiniCard';
+
+import { RiGithubFill } from 'react-icons/ri'
+import { FaPython, FaVuejs } from "react-icons/fa";
+
+import { GrMysql } from 'react-icons/gr'
 
 export default function Home() {
     const { colorMode, toggleColorMode } = useColorMode()
@@ -18,8 +23,8 @@ export default function Home() {
             <Header />
             <Flex w="100%" my="6" maxWidth={1480} mx="auto" px="6">
                 <Sidebar />
-                <Flex direction="column">
-                    <Flex>
+                <Stack spacing="8">
+                    <Flex flexDirection="column">
                         <Text as="span" fontSize={22} fontWeight="bold" color={color} mb="5">PROJECTS</Text>
                         <SimpleGrid flex="1" gap="4" minChildWidth={320} align="flex-start" columns={3}>
                             <ProjectBox
@@ -77,12 +82,35 @@ export default function Home() {
                             </ProjectBox>
                         </SimpleGrid>
                     </Flex>
-                    <Flex>
+                    <Flex flexDirection="column">
                         <Text as="span" fontSize={22} fontWeight="bold" color={color} mb="5">WORK STACK</Text>
+                        <Flex flexDirection="row" justify="space-between">
+                            <MiniCard
+                                title="PYTHON"
+                                badge="yellow"
+                                description="description of where I use it and when"
+                                icon={FaPython}
+                                iconColor="yellow.400"
+                            />
+                            <MiniCard
+                                title="VUE"
+                                badge="green"
+                                description="description of where I use it and when"
+                                icon={FaVuejs}
+                                iconColor="yellow.400"
+                            />
+                            <MiniCard
+                                title="SQL"
+                                badge="blue"
+                                description="description of where I use it and when"
+                                icon={GrMysql}
+                                iconColor="yellow.400"
+                            />
+                        </Flex>
+                      
                     </Flex>
-                </Flex>
+                </Stack>
             </Flex>
         </Flex>
-
     )
 }
