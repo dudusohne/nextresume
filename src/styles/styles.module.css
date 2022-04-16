@@ -1,25 +1,26 @@
 .trailsText {
-    position: relative;
-    width: 100%;
-    /* line-height: 80px; */
-    color: rgba(0, 0, 0, 0.918);
-    /* font-size: 3em; */
-    font-weight: 800;
-    /* letter-spacing: -0.05em; */
-    will-change: transform, opacity;
-    overflow: hidden;
-    font-family: "Roboto Mono", monospace;
-  }
-  
-  .trailsText > div {
-    padding-right: 0.05em;
-    overflow: hidden;
-  }
-  
-  .container {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    justify-content: center;
-  }
-  
+  position: relative;
+  width: 100%;
+  /* line-height: 80px; */
+  color: rgba(0, 0, 0, 0.918);
+  /* font-size: 3em; */
+  font-weight: 800;
+  /* letter-spacing: -0.05em; */
+  will-change: transform, opacity;
+  overflow: hidden;
+  font-family: "Roboto Mono", monospace;
+  justify-content: center;
+}
+
+.trailsText > div {
+  padding-right: 0.05em;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
