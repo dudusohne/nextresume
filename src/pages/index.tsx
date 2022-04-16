@@ -16,16 +16,25 @@ export default function SignIn() {
         <ParallaxLayer
           offset={0}
           speed={1}
-          style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <TrailEffect open={open}>
-            <span style={{ fontSize: '90px', color: '#dfdfdf' }}>Eduardo</span>
-            <span style={{ fontSize: '90px', color: '#a3a3a3' }}>Sohne</span>
-            <span style={{ fontSize: '40px', letterSpacing: '4px', color: '#883933' }}>SOFTWARE</span>
-            <span style={{ fontSize: '40px', letterSpacing: '1px', color: '#883933' }}>ENGINEER</span>
-          </TrailEffect>
-          <TrailEffectPhoto open={open}>
-            <Avatar size="200px" name="Eduardo Sohne" src="https://avatars.githubusercontent.com/u/19408694?v=4" />
-          </TrailEffectPhoto>
+          style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+          <Flex flexDirection="row" align="center">
+
+            <TrailEffect open={open}>
+              <span style={{ fontSize: '90px', color: '#dfdfdf' }}>Eduardo</span>
+              <span style={{ fontSize: '90px', color: '#a3a3a3' }}>Sohne</span>
+              <span style={{ fontSize: '70px', letterSpacing: '4px', color: '#883933' }}>SOFTWARE</span>
+              <span style={{ fontSize: '70px', letterSpacing: '1px', color: '#883933' }}>ENGINEER</span>
+            </TrailEffect>
+            <TrailEffectPhoto open={open}>
+              <Avatar size="200px" name="Eduardo Sohne" src="https://avatars.githubusercontent.com/u/19408694?v=4" />
+            </TrailEffectPhoto>
+          </Flex>
+          <Flex>
+            {open ?
+              <span style={{ fontSize: '22px', color: '#fdba6d', letterSpacing: '6px' }}>click anywhere</span>
+              : ''
+            }
+          </Flex>
         </ParallaxLayer>
 
         <Flex flexDirection="column" align="center" justify="center" mt="300">
