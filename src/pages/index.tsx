@@ -1,33 +1,59 @@
-import { Flex, Button, Stack, Avatar, Text } from '@chakra-ui/react'
-import { Input } from '../components/Form/Input'
+import React, { useState } from 'react'
+import { Flex, Button, Avatar } from '@chakra-ui/react'
 import router from 'next/router';
 
+import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+
+import { TrailEffect } from '../helpers/TrailEffect'
+import { TrailEffectPhoto } from '../helpers/TrailEffectPhoto'
+
 export default function SignIn() {
+  const [open, set] = useState(true)
 
   return (
+    <Flex w="100vw" h="100vh" direction="column" onClick={() => set(state => !state)}>
+      <Parallax pages={2} style={{ top: '0', left: '0' }}>
+        <ParallaxLayer
+          offset={0}
+          speed={1}
+          style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <TrailEffect open={open}>
+            <span style={{ fontSize: '90px', color: '#dfdfdf' }}>Eduardo</span>
+            <span style={{ fontSize: '90px', color: '#a3a3a3' }}>Sohne</span>
+            <span style={{ fontSize: '40px', letterSpacing: '4px', color: '#883933' }}>SOFTWARE</span>
+            <span style={{ fontSize: '40px', letterSpacing: '1px', color: '#883933' }}>ENGINEER</span>
+          </TrailEffect>
+          <TrailEffectPhoto open={open}>
+            <Avatar size="200px" name="Eduardo Sohne" src="https://avatars.githubusercontent.com/u/19408694?v=4" />
+          </TrailEffectPhoto>
+        </ParallaxLayer>
 
-    <Flex w="100vw" h="100vh" align="center" justify="center" direction="column">
-      <Flex as="form" w="100%" maxWidth={360} bg="gray.200" padding="8" borderRadius={8} flexDir="column" borderColor="gray.300" borderWidth={1}>
-
-        <Flex justify="space-between" align="center" px="2">
-          <Stack spacing="5">
-            <Text fontSize={18} fontWeight="500" letterSpacing="tight" w="50" h="5" color="gray.900">portfolio</Text>
-            <Text fontSize="3xl" fontWeight="bold" letterSpacing="tight" w="50" h="5" color="black">Eduardo</Text>
-            <Text fontSize="3xl" fontWeight="bold" letterSpacing="tight" w="50" h="8" color="black">Sohne</Text>
-            <Stack spacing="0.1">
-              <Text as="span" fontSize="2xl" fontWeight="bold" letterSpacing="tight" w="50" h="5" color="gray.700">software</Text>
-              <Text as="span" fontSize="2xl" fontWeight="bold" letterSpacing="tight" w="50" h="8" color="gray.700">engineer</Text>
-            </Stack>
-
-          </Stack>
-
-          <Flex direction="column">
-            <Avatar size="2xl" name="Eduardo Sohne" src="https://avatars.githubusercontent.com/u/19408694?v=4"/>
-            <Button type="button" mt="4" fontWeight="bold" bgColor="red.700" color="white" size="md" onClick={() => router.push(`/home`)} _hover={{background: 'red.900'}}>ACCESS</Button>
-          </Flex>
+        <Flex flexDirection="column" align="center" justify="center" mt="300">
+          <TrailEffect open={!open}>
+            <span style={{ fontSize: '90px', color: '#dfdfdf' }}>scroll</span>
+            <span style={{ fontSize: '90px', color: '#a3a3a3' }}>down</span>
+            <span style={{ fontSize: '40px', letterSpacing: '4px', color: '#883933' }}>to</span>
+            <span style={{ fontSize: '40px', letterSpacing: '4px', color: '#883933' }}>access</span>
+          </TrailEffect>
         </Flex>
 
-      </Flex>
+        <ParallaxLayer offset={1} speed={3} style={{ backgroundColor: '#ffffff' }} />
+        <ParallaxLayer offset={1.1} speed={4} style={{ backgroundColor: '#f3ba65' }} />
+
+        <ParallaxLayer
+          offset={1}
+          speed={0.5}
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            color: 'white',
+          }}>
+          <Flex direction="column">
+            <Button type="button" mt="4" fontWeight="bold" bgColor="black" color="white" size="md" onClick={() => router.push(`/home`)} _hover={{ background: 'red' }}>ACCESS</Button>
+          </Flex>
+        </ParallaxLayer>
+      </Parallax>
     </Flex >
   )
 }
