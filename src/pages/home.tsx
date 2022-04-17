@@ -12,8 +12,10 @@ import { GrMysql } from 'react-icons/gr'
 import { SiJavascript, SiTypescript } from 'react-icons/si';
 
 export default function Home() {
-
-
+    const isWideVersion = useBreakpointValue({
+        base: false,
+        lg: true,
+    })
 
     const color = useColorModeValue("gray.800", "gray.200")
 
@@ -22,7 +24,7 @@ export default function Home() {
             <Header />
             <Flex w="100%" my="6" maxWidth={1480} mx="auto" px="6">
                 <Sidebar />
-                <Stack spacing="8" overflowY="scroll">
+                <Flex flexDirection="column">
                     <Flex flexDirection="column">
                         <Text as="span" fontSize={22} fontWeight="bold" color={color} mb="5">PROJECTS</Text>
                         <SimpleGrid flex="1" gap="4" minChildWidth={320} align="flex-start" columns={3}>
@@ -167,7 +169,7 @@ export default function Home() {
                         </Flex>
 
                     </Flex>
-                </Stack>
+                </Flex>
             </Flex>
         </Flex>
     )

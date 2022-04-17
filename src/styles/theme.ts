@@ -12,4 +12,5 @@ export const theme = extendTheme({
         heading: 'Roboto',
         body: 'Roboto',
     },
+    width: '100%',
 })

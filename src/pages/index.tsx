@@ -10,10 +10,10 @@ import { TrailEffectPhoto } from '../helpers/TrailEffectPhoto'
 export default function SignIn() {
   const [open, set] = useState(true)
 
-  const mobile = useBreakpointValue({
-    base: 'mobile',
-    md: ''
-  })
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    lg: true,
+})
 
   return (
     <Flex w="100vw" h="100vh" direction="column" onClick={() => set(state => !state)}>
@@ -32,7 +32,7 @@ export default function SignIn() {
             </TrailEffect>
             <TrailEffectPhoto open={open}>
               {
-                !mobile ?
+                isWideVersion ?
                   <Avatar size="200px" name="Eduardo Sohne" src="https://avatars.githubusercontent.com/u/19408694?v=4" />
                   : ''
               }
