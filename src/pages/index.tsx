@@ -41,7 +41,7 @@ export default function SignIn() {
 
           <Flex>
             {open ?
-              <span style={{ fontSize: '22px', color: '#fdba6d', letterSpacing: '6px' }}>click anywhere</span>
+              <span style={{ fontSize: '22px', color: '#fdba6d', letterSpacing: '6px', marginTop: '10rem' }}>click anywhere</span>
               : ''
             }
           </Flex>
