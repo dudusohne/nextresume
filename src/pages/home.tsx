@@ -22,7 +22,7 @@ export default function Home() {
             <Header />
             <Flex w="100%" my="6" maxWidth={1480} mx="auto" px="6">
                 <Sidebar />
-                <Stack spacing="8">
+                <Stack spacing="8" overflowY="scroll">
                     <Flex flexDirection="column">
                         <Text as="span" fontSize={22} fontWeight="bold" color={color} mb="5">PROJECTS</Text>
                         <SimpleGrid flex="1" gap="4" minChildWidth={320} align="flex-start" columns={3}>
@@ -83,7 +83,7 @@ export default function Home() {
                     </Flex>
                     <Flex flexDirection="column">
                         <Text as="span" fontSize={22} fontWeight="bold" color={color} mb="5">WORK STACK</Text>
-                        <Flex flexDirection="row" justify="space-between">
+                        <Flex flexDirection="row" justify="flex-start">
                             <MiniCard
                                 title="VUE"
                                 badge="green"
@@ -91,20 +91,22 @@ export default function Home() {
                                 icon={FaVuejs}
                                 iconColor="green.400"
                             />
-                                <MiniCard
+                            <MiniCard
                                 title="Javascript"
                                 badge="yellow"
                                 description="description of where I use it and when"
                                 icon={SiJavascript}
                                 iconColor="yellow.400"
                             />
-                                <MiniCard
+                            <MiniCard
                                 title="Typescript"
                                 badge="blue"
                                 description="description of where I use it and when"
                                 icon={SiTypescript}
-                                iconColor="yellow.400"
+                                iconColor="blue.400"
                             />
+                        </Flex>
+                        <Flex flexDirection="row" justify="flex-start" mt="2">
                             <MiniCard
                                 title="PYTHON"
                                 badge="yellow"
@@ -114,10 +116,53 @@ export default function Home() {
                             />
                             <MiniCard
                                 title="SQL"
-                                badge="blue"
+                                badge="cyan"
                                 description="description of where I use it and when"
                                 icon={GrMysql}
+                                iconColor="cyan.400"
+                            />
+                        </Flex>
+
+                    </Flex>
+                    <Flex flexDirection="column">
+                        <Text as="span" fontSize={22} fontWeight="bold" color={color} mb="5">WORK STACK</Text>
+                        <Flex flexDirection="row" justify="flex-start">
+                            <MiniCard
+                                title="VUE"
+                                badge="green"
+                                description="description of where I use it and when"
+                                icon={FaVuejs}
+                                iconColor="green.400"
+                            />
+                            <MiniCard
+                                title="Javascript"
+                                badge="yellow"
+                                description="description of where I use it and when"
+                                icon={SiJavascript}
                                 iconColor="yellow.400"
+                            />
+                            <MiniCard
+                                title="Typescript"
+                                badge="blue"
+                                description="description of where I use it and when"
+                                icon={SiTypescript}
+                                iconColor="blue.400"
+                            />
+                        </Flex>
+                        <Flex flexDirection="row" justify="flex-start" mt="2">
+                            <MiniCard
+                                title="PYTHON"
+                                badge="yellow"
+                                description="description of where I use it and when"
+                                icon={FaPython}
+                                iconColor="yellow.400"
+                            />
+                            <MiniCard
+                                title="SQL"
+                                badge="cyan"
+                                description="description of where I use it and when"
+                                icon={GrMysql}
+                                iconColor="cyan.400"
                             />
                         </Flex>
 
