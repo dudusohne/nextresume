@@ -1,6 +1,5 @@
 import { Badge, Flex, Icon, Text } from "@chakra-ui/react";
 
-
 interface MiniCardProps {
     title: string;
     description: string;
@@ -11,7 +10,6 @@ interface MiniCardProps {
 
 export function MiniCard({ title, description, icon, iconColor, badge }: MiniCardProps) {
 
-
     return (
         <Flex
             width="fit-content"
@@ -21,6 +19,7 @@ export function MiniCard({ title, description, icon, iconColor, badge }: MiniCar
             border="1px solid"
             borderRadius="8px"
             borderColor="gray.600"
+            mr="2"
         >
             <Flex flexDirection="row" justify="space-between">
                 <Badge variant='solid' colorScheme={badge}>

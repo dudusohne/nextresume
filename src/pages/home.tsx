@@ -9,6 +9,7 @@ import { RiGithubFill } from 'react-icons/ri'
 import { FaPython, FaVuejs } from "react-icons/fa";
 
 import { GrMysql } from 'react-icons/gr'
+import { SiJavascript, SiTypescript } from 'react-icons/si';
 
 export default function Home() {
 
@@ -84,17 +85,31 @@ export default function Home() {
                         <Text as="span" fontSize={22} fontWeight="bold" color={color} mb="5">WORK STACK</Text>
                         <Flex flexDirection="row" justify="space-between">
                             <MiniCard
-                                title="PYTHON"
-                                badge="yellow"
-                                description="description of where I use it and when"
-                                icon={FaPython}
-                                iconColor="yellow.400"
-                            />
-                            <MiniCard
                                 title="VUE"
                                 badge="green"
                                 description="description of where I use it and when"
                                 icon={FaVuejs}
+                                iconColor="green.400"
+                            />
+                                <MiniCard
+                                title="Javascript"
+                                badge="yellow"
+                                description="description of where I use it and when"
+                                icon={SiJavascript}
+                                iconColor="yellow.400"
+                            />
+                                <MiniCard
+                                title="Typescript"
+                                badge="blue"
+                                description="description of where I use it and when"
+                                icon={SiTypescript}
+                                iconColor="yellow.400"
+                            />
+                            <MiniCard
+                                title="PYTHON"
+                                badge="yellow"
+                                description="description of where I use it and when"
+                                icon={FaPython}
                                 iconColor="yellow.400"
                             />
                             <MiniCard
