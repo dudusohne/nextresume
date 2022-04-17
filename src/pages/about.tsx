@@ -17,6 +17,13 @@ export default function About() {
                 <Flex direction="column">
                     <Text as="span" fontSize={22} fontWeight="bold" color={text} mb="5">ABOUT ME</Text>
                     <Stack spacing="4">
+                        <Text
+                            fontSize={["8px", "10px", "12px", "14px"]}
+                            as="span"
+                            fontWeight="bold"
+                            fontStyle="italic"
+                            color="red.700"
+                        >last job's</Text>
                         <Flex direction="row">
                             <AboutJob
                                 job="Fulltime Job"
@@ -35,6 +42,13 @@ export default function About() {
                             />
                             <TechData />
                         </Flex>
+                        <Text
+                            fontSize={["8px", "10px", "12px", "14px"]}
+                            as="span"
+                            fontWeight="bold"
+                            fontStyle="italic"
+                            color="red.700"
+                        >actual job</Text>
                         <Flex direction="row">
                             <AboutJob
                                 job="Fulltime Job"
