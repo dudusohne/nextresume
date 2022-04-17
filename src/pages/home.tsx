@@ -1,4 +1,4 @@
-import { Flex, SimpleGrid, Box, Text, Divider, Stack, Button, IconButton, useColorMode, useColorModeValue, useDisclosure, Slide, Link, Popover, PopoverTrigger, PopoverContent, PopoverArrow, PopoverHeader, PopoverCloseButton, PopoverBody } from '@chakra-ui/react'
+import { Flex, SimpleGrid, Box, Text, Divider, Stack, Button, IconButton, useColorMode, useColorModeValue, useDisclosure, Slide, Link, Popover, PopoverTrigger, PopoverContent, PopoverArrow, PopoverHeader, PopoverCloseButton, PopoverBody, useBreakpointValue } from '@chakra-ui/react'
 import { Header } from '../components/Header'
 import { Sidebar } from '../components/Sidebar'
 import { BottomSlideContent } from '../components/BottomSlideContent';
@@ -11,12 +11,10 @@ import { FaPython, FaVuejs } from "react-icons/fa";
 import { GrMysql } from 'react-icons/gr'
 
 export default function Home() {
-    const { colorMode, toggleColorMode } = useColorMode()
-    const { isOpen, onOpen, onClose, onToggle } = useDisclosure()
 
-    const bg = useColorModeValue("red.500", "red.200")
+
+
     const color = useColorModeValue("gray.800", "gray.200")
-    const border = useColorModeValue("gray.200", "gray.300")
 
     return (
         <Flex direction="column" h="100vh">
@@ -107,7 +105,7 @@ export default function Home() {
                                 iconColor="yellow.400"
                             />
                         </Flex>
-                      
+
                     </Flex>
                 </Stack>
             </Flex>

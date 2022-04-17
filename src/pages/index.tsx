@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Flex, Button, Avatar } from '@chakra-ui/react'
+import { Flex, Button, Avatar, useBreakpointValue } from '@chakra-ui/react'
 import router from 'next/router';
 
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
@@ -10,6 +10,11 @@ import { TrailEffectPhoto } from '../helpers/TrailEffectPhoto'
 export default function SignIn() {
   const [open, set] = useState(true)
 
+  const mobile = useBreakpointValue({
+    base: 'mobile',
+    md: ''
+  })
+
   return (
     <Flex w="100vw" h="100vh" direction="column" onClick={() => set(state => !state)}>
       <Parallax pages={2} style={{ top: '0', left: '0' }}>
@@ -17,24 +22,30 @@ export default function SignIn() {
           offset={0}
           speed={1}
           style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-          <Flex flexDirection="row" align="center">
 
+          <Flex flexDirection="row" align="center">
             <TrailEffect open={open}>
-              <span style={{ fontSize: '90px', color: '#dfdfdf', alignSelf: 'center' }}>Eduardo</span>
-              <span style={{ fontSize: '90px', color: '#a3a3a3', alignSelf: 'center' }}>Sohne</span>
-              <span style={{ fontSize: '70px', letterSpacing: '4px', color: '#883933', alignSelf: 'center' }}>SOFTWARE</span>
-              <span style={{ fontSize: '70px', letterSpacing: '1px', color: '#883933' }}>ENGINEER</span>
+              <span style={{ fontSize: '75px', color: '#dfdfdf', alignSelf: 'center' }}>Eduardo</span>
+              <span style={{ fontSize: '70px', color: '#a3a3a3', alignSelf: 'center' }}>Sohne</span>
+              <span style={{ fontSize: '65px', letterSpacing: '4px', color: '#883933' }}>SOFTWARE</span>
+              <span style={{ fontSize: '78px', letterSpacing: '1px', color: '#883933' }}>ENGINEER</span>
             </TrailEffect>
             <TrailEffectPhoto open={open}>
-              <Avatar size="200px" name="Eduardo Sohne" src="https://avatars.githubusercontent.com/u/19408694?v=4" />
+              {
+                !mobile ?
+                  <Avatar size="200px" name="Eduardo Sohne" src="https://avatars.githubusercontent.com/u/19408694?v=4" />
+                  : ''
+              }
             </TrailEffectPhoto>
           </Flex>
+
           <Flex>
             {open ?
               <span style={{ fontSize: '22px', color: '#fdba6d', letterSpacing: '6px' }}>click anywhere</span>
               : ''
             }
           </Flex>
+
         </ParallaxLayer>
 
         <Flex flexDirection="column" align="center" justify="center" mt="300">
