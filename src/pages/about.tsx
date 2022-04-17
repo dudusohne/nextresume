@@ -23,7 +23,7 @@ export default function About() {
                             fontWeight="bold"
                             fontStyle="italic"
                             color="red.700"
-                        >last job's</Text>
+                        >last jobs</Text>
                         <Flex direction="row">
                             <AboutJob
                                 job="Fulltime Job"
