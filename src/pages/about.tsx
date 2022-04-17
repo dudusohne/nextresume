@@ -31,7 +31,7 @@ export default function About() {
                                 period="03/2021 - 11/2021"
                                 role="Web Developer"
                             />
-                            <TechData />
+                     
                         </Flex>
                         <Flex direction="row">
                             <AboutJob
@@ -40,7 +40,7 @@ export default function About() {
                                 period="09/2021 - 12/2021"
                                 role="Web Developer"
                             />
-                            <TechData />
+                     
                         </Flex>
                         <Text
                             fontSize={["8px", "10px", "12px", "14px"]}
@@ -56,7 +56,7 @@ export default function About() {
                                 period="11/2021 - present"
                                 role="FullStack Developer"
                             />
-                            <TechData />
+                         
                         </Flex>
                     </Stack>
                 </Flex>
