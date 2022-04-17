@@ -1,4 +1,4 @@
-import { Badge, Flex, Icon, Text } from "@chakra-ui/react";
+import { Badge, Flex, Icon, Text, useColorModeValue } from "@chakra-ui/react";
 
 interface MiniCardProps {
     title: string;
@@ -9,6 +9,7 @@ interface MiniCardProps {
 }
 
 export function MiniCard({ title, description, icon, iconColor, badge }: MiniCardProps) {
+    const bgColor = useColorModeValue("gray.200", "gray.900")
 
     return (
         <Flex
@@ -20,7 +21,7 @@ export function MiniCard({ title, description, icon, iconColor, badge }: MiniCar
             borderRadius="8px"
             borderColor="gray.600"
             mr="2"
-            _hover={{ borderColor: 'red.900', background: 'gray.900', cursor: 'pointer', borderRadius: '16px', dropShadow: '0px 0px 8px rgba(214, 59, 59, 0.753)' }}
+            _hover={{ borderColor: 'red.900', background: `${bgColor}`, cursor: 'pointer', borderRadius: '16px', dropShadow: '0px 0px 8px rgba(214, 59, 59, 0.753)' }}
             transition="0.4s ease"
         >
             <Flex flexDirection="row" justify="space-between">

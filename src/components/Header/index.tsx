@@ -58,9 +58,10 @@ export function Header() {
                                 borderColor="gray.400"
                                 aria-label="Call Sage"
                                 fontSize="20px"
+                                borderRadius="25px"
                                 icon={<RiWhatsappFill color="gray" />}
                                 transition="0.5s"
-                                _hover={{ background: 'red.300', color: 'gray.600' }}
+                                _hover={{ background: 'orange.200' }}
                             />
                         </Link>
                         <Divider orientation="vertical" />
