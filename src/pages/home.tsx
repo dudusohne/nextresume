@@ -1,7 +1,6 @@
-import { Flex, SimpleGrid, Box, Text, Divider, Stack, Button, IconButton, useColorMode, useColorModeValue, useDisclosure, Slide, Link, Popover, PopoverTrigger, PopoverContent, PopoverArrow, PopoverHeader, PopoverCloseButton, PopoverBody, useBreakpointValue } from '@chakra-ui/react'
+import { Flex, SimpleGrid, Text, IconButton, useColorModeValue, Link } from '@chakra-ui/react'
 import { Header } from '../components/Header'
 import { Sidebar } from '../components/Sidebar'
-import { BottomSlideContent } from '../components/BottomSlideContent';
 import { ProjectBox } from '../components/ProjectBox';
 import { MiniCard } from '../MiniCard/MiniCard';
 
@@ -12,11 +11,6 @@ import { GrMysql } from 'react-icons/gr'
 import { SiJavascript, SiTypescript } from 'react-icons/si';
 
 export default function Home() {
-    const isWideVersion = useBreakpointValue({
-        base: false,
-        lg: true,
-    })
-
     const color = useColorModeValue("gray.800", "gray.200")
 
     return (
