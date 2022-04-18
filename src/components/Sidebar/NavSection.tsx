@@ -12,7 +12,7 @@ export function NavSection({ title, children }: NavSectionProps) {
     const color = useColorModeValue("gray.700", "gray.500")
 
     return (
-        <Box>
+        <Box zIndex={10}>
             <Text fontWeight="bold" color={color} fontSize="small">{title}</Text>
             <Stack spacing="4" mt="8" align="stretch">
                 {children}
