@@ -40,8 +40,8 @@ export function Header() {
                     >
                         <DrawerOverlay />
                         <DrawerContent bg="gray.800" p="4">
-                            <DrawerCloseButton />
-                            <DrawerHeader>Navegação</DrawerHeader>
+                            <DrawerCloseButton color="red" />
+                            <DrawerHeader color="gray.600">Navegação</DrawerHeader>
                             <DrawerBody>
                                 <SidebarNav />
                             </DrawerBody>

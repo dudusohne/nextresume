@@ -10,7 +10,7 @@ export default function About() {
     const bg = useColorModeValue("gray.200", "gray.800")
 
     return (
-        <Flex direction="column" h="100vh">
+        <Flex direction="column" h="100vh" align="center">
             <Header />
             <Flex w="100%" my="6" maxWidth={1480} mx="auto" px="6">
                 <Sidebar />

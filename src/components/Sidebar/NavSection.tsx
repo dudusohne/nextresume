@@ -9,10 +9,10 @@ interface NavSectionProps {
 
 export function NavSection({ title, children }: NavSectionProps) {
     
-    const color = useColorModeValue("gray.700", "gray.500")
+    const color = useColorModeValue("gray.100", "gray.500")
 
     return (
-        <Box zIndex={10}>
+        <Box>
             <Text fontWeight="bold" color={color} fontSize="small">{title}</Text>
             <Stack spacing="4" mt="8" align="stretch">
                 {children}
