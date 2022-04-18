@@ -17,7 +17,7 @@ export default function SignIn() {
 
   return (
     <Flex w="100vw" h="100vh" direction="column" onClick={() => set(state => !state)}>
-      <Parallax pages={2} style={{ top: '0', left: '0' }}>
+      <Parallax pages={1.4} style={{ top: '0', left: '0' }}>
         <ParallaxLayer
           offset={0}
           speed={1}
@@ -41,7 +41,7 @@ export default function SignIn() {
 
           <Flex>
             {open ?
-              <span style={{ fontSize: '22px', color: '#fdba6d', letterSpacing: '6px', marginTop: '10rem' }}>click anywhere</span>
+              <span style={{ fontSize: '22px', color: '#fdba6d', letterSpacing: '6px', marginTop: '5rem' }}>click anywhere</span>
               : ''
             }
           </Flex>
@@ -57,11 +57,11 @@ export default function SignIn() {
           </TrailEffect>
         </Flex>
 
-        <ParallaxLayer offset={0.9} speed={3} style={{ backgroundColor: '#ffffff' }} />
-        <ParallaxLayer offset={1.1} speed={4} style={{ backgroundColor: '#f3ba65' }} />
+        <ParallaxLayer offset={0.83} speed={4} style={{ backgroundColor: '#ffffff', height: '10vh' }} />
+        <ParallaxLayer offset={0.93} speed={2} style={{ backgroundColor: '#f3ba65', height: '50vh' }} />
 
         <ParallaxLayer
-          offset={1}
+          offset={0.6}
           speed={0.5}
           style={{
             display: 'flex',

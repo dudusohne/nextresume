@@ -18,21 +18,21 @@ export default function Home() {
     const stripe = useColorModeValue("gray.400", "gray.600")
 
     return (
-        <Flex direction="column" h="100vh">
+        <Flex direction="column" h="100vh" align="center">
 
             <Header />
             <Flex w="100%" my="6" maxWidth={1480} mx="auto" px="6">
                 <Sidebar />
                 <Flex flexDirection="column">
 
-
-                    <Parallax pages={1.5} style={{ top: '0', left: '0' }}>
-                        <ParallaxLayer
+                    {/* <Parallax pages={1.5} style={{ top: '0', left: '0' }}> */}
+                        {/* <ParallaxLayer
                             offset={0}
                             speed={1}
                             style={{
                                 display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'
                             }}>
+                        </ParallaxLayer> */}
                             <Flex flexDirection="column">
                                 <Text as="span" fontSize={22} fontWeight="bold" color={color} mb="5">PROJECTS</Text>
                                 <SimpleGrid flex="1" gap="4" minChildWidth={320} align="flex-start" columns={3}>
@@ -91,11 +91,11 @@ export default function Home() {
                                     </ProjectBox>
                                 </SimpleGrid>
                             </Flex>
-                        </ParallaxLayer>
 
-                        <ParallaxLayer offset={0.7} speed={3} style={{ backgroundColor: '#151924', height: '10vh', zIndex: -1 }} />
-                        <ParallaxLayer offset={0.9} speed={4} style={{ backgroundColor: '#f3ba65', height: '20vh' }} />
 
+                        {/* <ParallaxLayer offset={0.7} speed={3} style={{ backgroundColor: '#151924', height: '10vh', zIndex: -1 }} />
+                        <ParallaxLayer offset={0.9} speed={4} style={{ backgroundColor: '#f3ba65', height: '20vh' }} /> */}
+{/* 
                         <ParallaxLayer
                             offset={0.6}
                             speed={0.5}
@@ -105,6 +105,7 @@ export default function Home() {
                                 alignItems: 'center',
                                 color: 'white',
                             }}>
+                        </ParallaxLayer> */}
                             <Flex flexDirection="column" mt="10">
                                 <Text as="span" fontSize={22} fontWeight="bold" color={color} mb="5">WORK STACK</Text>
                                 <Flex flexDirection="row" justify="flex-start">
@@ -148,8 +149,7 @@ export default function Home() {
                                 </Flex>
 
                             </Flex>
-                        </ParallaxLayer>
-                    </Parallax>
+                    {/* </Parallax> */}
                 </Flex>
             </Flex>
         </Flex >

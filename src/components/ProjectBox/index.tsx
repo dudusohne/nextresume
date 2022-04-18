@@ -8,7 +8,7 @@ export function ProjectBox({ title, subtitle, tools, description, buttonText, ch
     const bgColor = useColorModeValue("gray.200", "gray.900")
 
     return (
-        <Box p="8" borderRadius={8} borderWidth={1} borderColor={border} transition="0.4s ease" background={bg}
+        <Box p={["6","8"]} borderRadius={8} borderWidth={1} borderColor={border} transition="0.4s ease" background={bg}
          _hover={{ borderColor: 'red.300', borderRadius: '30px', background: `${bgColor}` }}>
             <Stack spacing="4">
                 <Box>
