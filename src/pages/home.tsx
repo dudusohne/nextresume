@@ -5,6 +5,7 @@ import {
   IconButton,
   useColorModeValue,
   Link,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import { Header } from "../components/Header";
 import { Sidebar } from "../components/Sidebar";
@@ -24,20 +25,29 @@ export default function Home() {
 
   const stripe = useColorModeValue("gray.400", "gray.600");
 
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    lg: true,
+  })
+
   return (
     <Flex direction="column" h="100vh" align="center">
       <Header />
       <Flex w="100%" my="6" maxWidth={1480} mx="auto" px="6">
         <Sidebar />
         <Flex flexDirection="column">
-          {/* <Parallax pages={1.5} style={{ top: '0', left: '0' }}> */}
-          {/* <ParallaxLayer
-                            offset={0}
-                            speed={1}
-                            style={{
-                                display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'
-                            }}>
-                        </ParallaxLayer> */}
+
+
+          {/* // <Parallax pages={1.5} style={{ top: '0', left: '0' }}>
+            //   <ParallaxLayer
+            //     offset={0}
+            //     speed={1}
+            //     style={{
+            //       display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'
+            //     }}>
+            //   </ParallaxLayer> */}
+
+
           <Flex flexDirection="column">
             <Text
               as="span"
@@ -134,20 +144,16 @@ export default function Home() {
               </ProjectBox>
             </SimpleGrid>
           </Flex>
-
-          {/* <ParallaxLayer offset={0.7} speed={3} style={{ backgroundColor: '#151924', height: '10vh', zIndex: -1 }} />
-                        <ParallaxLayer offset={0.9} speed={4} style={{ backgroundColor: '#f3ba65', height: '20vh' }} /> */}
-          {/* 
-                        <ParallaxLayer
-                            offset={0.6}
-                            speed={0.5}
-                            style={{
-                                display: 'flex',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                color: 'white',
-                            }}>
-                        </ParallaxLayer> */}
+          {/* <ParallaxLayer offset={0.7} speed={3} style={{ backgroundColor: '#151924', height: '10vh', zIndex: -1 }} /><ParallaxLayer offset={0.9} speed={4} style={{ backgroundColor: '#f3ba65', height: '20vh' }} /><ParallaxLayer
+                  offset={0.6}
+                  speed={0.5}
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    color: 'white',
+                  }}>
+                </ParallaxLayer> */}
           <Flex flexDirection="column" mt="10">
             <Text
               as="span"
@@ -198,7 +204,6 @@ export default function Home() {
               />
             </Flex>
           </Flex>
-          {/* </Parallax> */}
         </Flex>
       </Flex>
     </Flex>

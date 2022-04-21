@@ -18,7 +18,6 @@ export default function Contact() {
                     <Text as="span" fontSize={22} fontWeight="bold" color={text} mb="5">Send me a message</Text>
                     <Input as="textarea" w="60%" minHeight="200" bg={bg} />
                     <Button w="60%" mt="4">ENVIAR</Button>
-                    
                 </Flex>
             </Flex>
         </Flex>

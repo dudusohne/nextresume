@@ -13,7 +13,7 @@ export default function SignIn() {
   const isWideVersion = useBreakpointValue({
     base: false,
     lg: true,
-})
+  })
 
   return (
     <Flex w="100vw" h="100vh" direction="column" onClick={() => set(state => !state)}>
