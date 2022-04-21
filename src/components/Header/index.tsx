@@ -12,6 +12,7 @@ export function Header() {
     const btnRef = React.useRef()
 
     const bg = useColorModeValue("white", "gray.800")
+    const sidebarBg = useColorModeValue("gray.200", "gray.800")
 
     const isWideVersion = useBreakpointValue({
         base: false,
@@ -39,7 +40,7 @@ export function Header() {
 
                     >
                         <DrawerOverlay />
-                        <DrawerContent bg="gray.800" p="4">
+                        <DrawerContent bg={sidebarBg} p="4">
                             <DrawerCloseButton color="red" />
                             <DrawerHeader color="gray.600">Navegação</DrawerHeader>
                             <DrawerBody>

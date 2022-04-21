@@ -9,7 +9,7 @@ interface NavSectionProps {
 
 export function NavSection({ title, children }: NavSectionProps) {
     
-    const color = useColorModeValue("gray.100", "gray.500")
+    const color = useColorModeValue("gray.600", "gray.500")
 
     return (
         <Box>
