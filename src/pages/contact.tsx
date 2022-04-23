@@ -17,7 +17,7 @@ export default function Contact() {
                 <Flex direction="column" w="100%" align="center" mt="2">
                     <Text as="span" fontSize={22} fontWeight="bold" color={text} mb="5">Send me a message</Text>
                     <Input as="textarea" w="60%" minHeight="200" bg={bg} />
-                    <Button w="60%" mt="4">ENVIAR</Button>
+                    <Button w="60%" mt="4">SEND</Button>
                 </Flex>
             </Flex>
         </Flex>
