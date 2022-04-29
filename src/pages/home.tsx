@@ -10,7 +10,7 @@ import {
 import { Header } from "../components/Header";
 import { Sidebar } from "../components/Sidebar";
 import { ProjectBox } from "../components/ProjectBox";
-import { MiniCard } from "../MiniCard/MiniCard";
+import { MiniCard } from "../components/MiniCard/MiniCard";
 
 import { RiGithubFill } from "react-icons/ri";
 import { FaPython, FaVuejs } from "react-icons/fa";

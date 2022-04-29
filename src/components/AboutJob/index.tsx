@@ -1,13 +1,13 @@
 import { Text, useColorModeValue, Grid, GridItem, Box, Divider } from '@chakra-ui/react';
-import { AboutJobProps } from '../../Interface/interface';
+import { AboutJobProps } from '../../interface/interface';
 
 export function AboutJob({ job, company, period, role }: AboutJobProps) {
-    const bg = useColorModeValue("gray.800", "gray.600")
-    const title = useColorModeValue("gray.200", "gray.900")
-    const text = useColorModeValue("gray.200", "gray.300")
+    const bg = useColorModeValue("gray.800", "red.900")
+    const title = useColorModeValue("gray.200", "black")
+    const text = useColorModeValue("gray.200", "gray.400")
 
     return (
-        <Box bg={bg} maxWidth={540} borderRadius={12} p="4" borderColor="red.500" border="1px solid #4d1010">
+        <Box bg={bg} maxWidth={540} borderRadius={6} p="3" border="1px solid #111">
             <Grid
                 templateRows="repeat(2, 1fr)"
                 templateColumns="repeat(2, 1fr)"
