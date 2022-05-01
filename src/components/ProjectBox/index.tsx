@@ -1,5 +1,5 @@
 import { Box, Stack, Text, Button, useColorModeValue, Divider, Flex } from "@chakra-ui/react";
-import { ProjectBoxProps } from "../../Interface/interface";
+import { ProjectBoxProps } from "../../interface/interface";
 
 export function ProjectBox({ title, subtitle, tools, description, buttonText, children, onClick }: ProjectBoxProps) {
     const bg = useColorModeValue("gray.50", "gray.900")

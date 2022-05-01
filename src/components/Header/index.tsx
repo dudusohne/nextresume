@@ -4,7 +4,7 @@ import { Profile } from './Profile';
 import { NotificationsNav } from './NotificationsNav';
 import { Logo } from './Logo';
 import { RiMenuLine, RiWhatsappFill } from 'react-icons/ri';
-import { HeaderProps } from '../../Interface/interface';
+import { HeaderProps } from '../../interface/interface';
 import { SidebarNav } from '../Sidebar/SidebarNav';
 
 export function Header() {
