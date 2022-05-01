@@ -20,7 +20,23 @@ export default function About() {
                     <Accordion allowToggle>
                         <AccordionItem>
                             <h2>
-                                <AccordionButton _expanded={{ bg: 'tomato', color: 'white' }}>
+                                <AccordionButton _expanded={{ bg: 'orange.500', color: 'white' }}>
+                                    <Box flex='1' textAlign='left'>
+                                        Click me to see a different style
+                                    </Box>
+                                    <AccordionIcon />
+                                </AccordionButton>
+                            </h2>
+                            <AccordionPanel>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                commodo consequat.
+                            </AccordionPanel>
+                        </AccordionItem>
+                        <AccordionItem>
+                            <h2>
+                                <AccordionButton _expanded={{ bg: 'orange.500', color: 'white' }}>
                                     <Box flex='1' textAlign='left'>
                                         Click me to see a different style
                                     </Box>
@@ -35,49 +51,7 @@ export default function About() {
                             </AccordionPanel>
                         </AccordionItem>
                     </Accordion>
-                    {/* <Stack spacing="4">
-                        <Text
-                            fontSize={["8px", "10px", "12px", "14px"]}
-                            as="span"
-                            fontWeight="bold"
-                            fontStyle="italic"
-                            color="red.700"
-                        >last jobs</Text>
-                        <Flex direction="row">
-                            <AboutJobTwo
-                                job="Fulltime Job"
-                                company="Smart Marketing Digital"
-                                period="03/2021 - 11/2021"
-                                role="Web Developer"
-                            />
-
-                        </Flex>
-                        <Flex direction="row">
-                            <AboutJobTwo
-                                job="Pertime Job"
-                                company="Edubrahub"
-                                period="09/2021 - 12/2021"
-                                role="Web Developer"
-                            />
-
-                        </Flex>
-                        <Text
-                            fontSize={["8px", "10px", "12px", "14px"]}
-                            as="span"
-                            fontWeight="bold"
-                            fontStyle="italic"
-                            color="red.700"
-                        >actual job</Text>
-                        <Flex direction="row">
-                            <AboutJobTwo
-                                job="Fulltime Job"
-                                company="Simbiose Ventures"
-                                period="11/2021 - present"
-                                role="FullStack Developer"
-                            />
-
-                        </Flex>
-                    </Stack> */}
+                    
                 </Flex>
             </Flex>
         </Flex>
