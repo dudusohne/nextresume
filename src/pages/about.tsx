@@ -1,4 +1,4 @@
-import { Flex, useColorModeValue, Stack, Text } from '@chakra-ui/react';
+import { Flex, useColorModeValue, Stack, Text, Accordion, AccordionItem, AccordionButton, AccordionIcon, AccordionPanel, Box } from '@chakra-ui/react';
 import { Sidebar } from '../components/Sidebar';
 import { AboutJobTwo } from '../components/AboutJobTwo';
 import { AboutJob } from '../components/AboutJob';
@@ -15,9 +15,27 @@ export default function About() {
             <Header />
             <Flex w="100%" my="6" maxWidth={1480} mx="auto" px="6">
                 <Sidebar />
-                <Flex direction="column">
+                <Flex direction="column" width="100%">
                     <Text as="span" fontSize={22} fontWeight="bold" color={text} mb="5">ABOUT ME</Text>
-                    <Stack spacing="4">
+                    <Accordion allowToggle>
+                        <AccordionItem>
+                            <h2>
+                                <AccordionButton _expanded={{ bg: 'tomato', color: 'white' }}>
+                                    <Box flex='1' textAlign='left'>
+                                        Click me to see a different style
+                                    </Box>
+                                    <AccordionIcon />
+                                </AccordionButton>
+                            </h2>
+                            <AccordionPanel>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                commodo consequat.
+                            </AccordionPanel>
+                        </AccordionItem>
+                    </Accordion>
+                    {/* <Stack spacing="4">
                         <Text
                             fontSize={["8px", "10px", "12px", "14px"]}
                             as="span"
@@ -59,7 +77,7 @@ export default function About() {
                             />
 
                         </Flex>
-                    </Stack>
+                    </Stack> */}
                 </Flex>
             </Flex>
         </Flex>

@@ -20,6 +20,7 @@ import { GrMysql } from "react-icons/gr";
 import { SiJavascript, SiTypescript } from "react-icons/si";
 
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import { DraggableList } from "../components/DraggableList/DraggableList";
 
 export default function Home() {
   const color = useColorModeValue("gray.800", "gray.200");
@@ -251,7 +252,7 @@ export default function Home() {
                 iconColor="blue.400"
               />
             </Flex>
-            <Flex flexDirection="row" justify="flex-start" mt="2">
+            <Flex flexDirection="row" justify="flex-start" mt="2" mb="10">
               <MiniCard
                 title="PYTHON"
                 badge="yellow"
