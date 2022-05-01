@@ -16,8 +16,8 @@ export default function Contact() {
                 <Sidebar />
                 <Flex direction="column" w="100%" align="center" mt="2">
                     <Text as="span" fontSize={22} fontWeight="bold" color={text} mb="5">Send me a message</Text>
-                    <Input as="textarea" w="60%" minHeight="200" bg={bg} />
-                    <Button w="60%" mt="4">SEND</Button>
+                    <Input as="textarea" w="60%" minHeight="200" bg={bg} disabled/>
+                    <Button w="60%" mt="4" disabled>SEND</Button>
                 </Flex>
             </Flex>
         </Flex>

@@ -13,6 +13,7 @@ import { ProjectBox } from "../components/ProjectBox";
 import { MiniCard } from "../components/MiniCard/MiniCard";
 
 import { RiGithubFill } from "react-icons/ri";
+import { FiGlobe } from "react-icons/fi";
 import { FaPython, FaVuejs } from "react-icons/fa";
 
 import { GrMysql } from "react-icons/gr";
@@ -141,6 +142,69 @@ export default function Home() {
                     }}
                   />
                 </Link>
+                <Link
+                  href="https://pokemon-desk-team.vercel.app/"
+                  target="_blank"
+                  ml="1"
+                >
+                  <IconButton
+                    variant="outline"
+                    borderColor="gray.400"
+                    aria-label="Call Sage"
+                    fontSize={30}
+                    icon={<FiGlobe color={color} />}
+                    _hover={{
+                      background: "red.500",
+                      color: "black.500",
+                      borderColor: "black",
+                      fontColor: "black",
+                    }}
+                  />
+                </Link>
+              </ProjectBox>
+              <ProjectBox
+                title="FAST TYPING"
+                subtitle="a typing challenge."
+                tools="vue 3, composition api and typescript"
+                description="its a cool js project with a few vue features."
+              >
+                <Link
+                  href="https://github.com/dudusohne/fast-typing"
+                  target="_blank"
+                >
+                  <IconButton
+                    variant="outline"
+                    borderColor="gray.400"
+                    aria-label="Call Sage"
+                    fontSize={30}
+                    icon={<RiGithubFill color={color} />}
+                    _hover={{
+                      background: "red.500",
+                      color: "black.500",
+                      borderColor: "black",
+                      fontColor: "black",
+                    }}
+                  />
+                </Link>
+                <Link
+                  href="https://fast-typing-six.vercel.app/"
+                  target="_blank"
+                  ml="1"
+                >
+                  <IconButton
+                    variant="outline"
+                    borderColor="gray.400"
+                    aria-label="Call Sage"
+                    fontSize={30}
+                    icon={<FiGlobe color={color} />}
+                    _hover={{
+                      background: "red.500",
+                      color: "black.500",
+                      borderColor: "black",
+                      fontColor: "black",
+                    }}
+                  />
+                </Link>
               </ProjectBox>
             </SimpleGrid>
           </Flex>
@@ -168,21 +232,21 @@ export default function Home() {
               <MiniCard
                 title="VUE"
                 badge="green"
-                description="description of where I use it and when"
+                description="front-end: interfaces, components and more."
                 icon={FaVuejs}
                 iconColor="green.400"
               />
               <MiniCard
                 title="Javascript"
                 badge="yellow"
-                description="description of where I use it and when"
+                description="mostly vanilla js, but also some es6 features."
                 icon={SiJavascript}
                 iconColor="yellow.400"
               />
               <MiniCard
                 title="Typescript"
                 badge="blue"
-                description="description of where I use it and when"
+                description="front-end"
                 icon={SiTypescript}
                 iconColor="blue.400"
               />
@@ -191,14 +255,14 @@ export default function Home() {
               <MiniCard
                 title="PYTHON"
                 badge="yellow"
-                description="description of where I use it and when"
+                description="back-end"
                 icon={FaPython}
                 iconColor="yellow.400"
               />
               <MiniCard
                 title="SQL"
                 badge="cyan"
-                description="description of where I use it and when"
+                description="database"
                 icon={GrMysql}
                 iconColor="cyan.400"
               />
