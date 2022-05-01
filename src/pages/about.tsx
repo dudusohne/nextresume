@@ -1,5 +1,6 @@
 import { Flex, useColorModeValue, Stack, Text } from '@chakra-ui/react';
 import { Sidebar } from '../components/Sidebar';
+import { AboutJobTwo } from '../components/AboutJobTwo';
 import { AboutJob } from '../components/AboutJob';
 import { TechData } from '../components/TechData';
 import { Header } from '../components/Header';
@@ -25,7 +26,7 @@ export default function About() {
                             color="red.700"
                         >last jobs</Text>
                         <Flex direction="row">
-                            <AboutJob
+                            <AboutJobTwo
                                 job="Fulltime Job"
                                 company="Smart Marketing Digital"
                                 period="03/2021 - 11/2021"
@@ -34,7 +35,7 @@ export default function About() {
 
                         </Flex>
                         <Flex direction="row">
-                            <AboutJob
+                            <AboutJobTwo
                                 job="Pertime Job"
                                 company="Edubrahub"
                                 period="09/2021 - 12/2021"
@@ -50,7 +51,7 @@ export default function About() {
                             color="red.700"
                         >actual job</Text>
                         <Flex direction="row">
-                            <AboutJob
+                            <AboutJobTwo
                                 job="Fulltime Job"
                                 company="Simbiose Ventures"
                                 period="11/2021 - present"
