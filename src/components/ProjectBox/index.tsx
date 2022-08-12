@@ -17,7 +17,7 @@ export function ProjectBox({ title, subtitle, tools, description, buttonText, ch
                     <Text color="red.600" fontWeight="600">{subtitle}</Text>
                 </Box>
                 <Box>
-                    <Text as="span" color={color} fontWeight="600" fontSize={22}>tools and techs:</Text>
+                    <Text as="span" color={color} fontWeight="600" fontSize={22}>features:</Text>
                     <Text color={color}>{tools}</Text>
                 </Box>
                 <Box>
