@@ -5,7 +5,6 @@ import {
   IconButton,
   useColorModeValue,
   Link,
-  useBreakpointValue,
 } from "@chakra-ui/react";
 import { Header } from "../components/Header";
 import { Sidebar } from "../components/Sidebar";
@@ -19,17 +18,10 @@ import { FaPython, FaVuejs } from "react-icons/fa";
 import { GrMysql } from "react-icons/gr";
 import { SiJavascript, SiTypescript } from "react-icons/si";
 
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-
 export default function Home() {
   const color = useColorModeValue("gray.800", "gray.200");
-
-  const stripe = useColorModeValue("gray.400", "gray.600");
-
-  const isWideVersion = useBreakpointValue({
-    base: false,
-    lg: true,
-  })
+  const textColor = useColorModeValue("gray.500", "orange.300");
+  const textColorTwo = useColorModeValue("gray.600", "orange.200");
 
   return (
     <Flex direction="column" h="100vh" align="center">
@@ -38,24 +30,59 @@ export default function Home() {
         <Sidebar />
         <Flex flexDirection="column">
 
-
-          {/* // <Parallax pages={1.5} style={{ top: '0', left: '0' }}>
-            //   <ParallaxLayer
-            //     offset={0}
-            //     speed={1}
-            //     style={{
-            //       display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'
-            //     }}>
-            //   </ParallaxLayer> */}
-
-
           <Flex flexDirection="column">
+            <Flex flexDirection="column">
+              <Text
+                as="span"
+                fontSize={22}
+                fontWeight="bold"
+                color={color}
+                mb="5"
+              >
+                ABOUT ME
+              </Text>
+              <Text as="span"
+                fontSize={20}
+                fontWeight="medium"
+                color={textColor}
+              >
+                My name is Eduardo and I am a full-stack developer. <br></br>My favorite language is Javascript(Typescript in fact) and I prefer front-end than back. 
+              </Text>
+              <Text as="span"
+                fontSize={20}
+                fontWeight="medium"
+                color={textColorTwo}
+              >
+                I have 2y experience with software development working with javascript mostly, already use a few js frameworks and my actual favorite its Vue 3.
+              </Text>
+            </Flex>
+            <Flex flexDirection="column" mt="5">
+              <Text
+                as="span"
+                fontSize={18}
+                fontWeight="bold"
+                color={color}
+                mb="5"
+              >
+                BESIDES CODING
+              </Text>
+              <Text as="span"
+                fontSize={20}
+                fontWeight="medium"
+                color={textColorTwo}
+              >
+                Im a great team player, used to collaborate with other devs to build software in all ways. <br></br>
+                Have experience with Scrum, Kanban and other frameworks of that kind. 
+              </Text>
+              
+            </Flex>
             <Text
               as="span"
               fontSize={22}
               fontWeight="bold"
               color={color}
               mb="5"
+              mt="10"
             >
               PROJECTS
             </Text>
@@ -66,6 +93,50 @@ export default function Home() {
               align="flex-start"
               columns={3}
             >
+              <ProjectBox
+                title="POKEMON DESK"
+                subtitle="make your own pokemon team."
+                tools="vue 3, composition api, typescript and quasar"
+                description="its a simple vue project that calls an pokemon api"
+              >
+                <Link
+                  href="https://github.com/dudusohne/pokemon-desk-team"
+                  target="_blank"
+                >
+                  <IconButton
+                    variant="outline"
+                    borderColor="gray.400"
+                    aria-label="Call Sage"
+                    fontSize={30}
+                    icon={<RiGithubFill color={color} />}
+                    _hover={{
+                      background: "red.500",
+                      color: "black.500",
+                      borderColor: "black",
+                      fontColor: "black",
+                    }}
+                  />
+                </Link>
+                <Link
+                  href="https://pokemon-desk-team.vercel.app/"
+                  target="_blank"
+                  ml="1"
+                >
+                  <IconButton
+                    variant="outline"
+                    borderColor="gray.400"
+                    aria-label="Call Sage"
+                    fontSize={30}
+                    icon={<FiGlobe color={color} />}
+                    _hover={{
+                      background: "red.500",
+                      color: "black.500",
+                      borderColor: "black",
+                      fontColor: "black",
+                    }}
+                  />
+                </Link>
+              </ProjectBox>
               <ProjectBox
                 title="BAR TABS"
                 subtitle="this project has a purpose of managing stock, tabs and sales for a pub."
@@ -109,50 +180,6 @@ export default function Home() {
                     aria-label="Call Sage"
                     fontSize={30}
                     icon={<RiGithubFill color={color} />}
-                    _hover={{
-                      background: "red.500",
-                      color: "black.500",
-                      borderColor: "black",
-                      fontColor: "black",
-                    }}
-                  />
-                </Link>
-              </ProjectBox>
-              <ProjectBox
-                title="POKEMON DESK"
-                subtitle="make your own pokemon team."
-                tools="vue 3, composition api, typescript and quasar"
-                description="its a simple vue project that calls an pokemon api"
-              >
-                <Link
-                  href="https://github.com/dudusohne/pokemon-desk-team"
-                  target="_blank"
-                >
-                  <IconButton
-                    variant="outline"
-                    borderColor="gray.400"
-                    aria-label="Call Sage"
-                    fontSize={30}
-                    icon={<RiGithubFill color={color} />}
-                    _hover={{
-                      background: "red.500",
-                      color: "black.500",
-                      borderColor: "black",
-                      fontColor: "black",
-                    }}
-                  />
-                </Link>
-                <Link
-                  href="https://pokemon-desk-team.vercel.app/"
-                  target="_blank"
-                  ml="1"
-                >
-                  <IconButton
-                    variant="outline"
-                    borderColor="gray.400"
-                    aria-label="Call Sage"
-                    fontSize={30}
-                    icon={<FiGlobe color={color} />}
                     _hover={{
                       background: "red.500",
                       color: "black.500",
@@ -208,16 +235,7 @@ export default function Home() {
               </ProjectBox>
             </SimpleGrid>
           </Flex>
-          {/* <ParallaxLayer offset={0.7} speed={3} style={{ backgroundColor: '#151924', height: '10vh', zIndex: -1 }} /><ParallaxLayer offset={0.9} speed={4} style={{ backgroundColor: '#f3ba65', height: '20vh' }} /><ParallaxLayer
-                  offset={0.6}
-                  speed={0.5}
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    color: 'white',
-                  }}>
-                </ParallaxLayer> */}
+
           <Flex flexDirection="column" mt="10">
             <Text
               as="span"

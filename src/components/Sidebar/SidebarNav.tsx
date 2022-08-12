@@ -12,14 +12,14 @@ import { NavSection } from "./NavSection";
 export function SidebarNav() {
   return (
     <Stack spacing="12" align="flex-start" zIndex={10}>
-      <NavSection title="GENERAL">
+      {/* <NavSection title="GENERAL">
         <NavLink icon={RiDashboardLine} href="/home">
           Projects
         </NavLink>
         <NavLink icon={RiContactsLine} href="/about">
           About
         </NavLink>
-      </NavSection>
+      </NavSection> */}
 
       <NavSection title="CONTACT">
         <NavLink icon={BiMessageDots} href="/contact">
