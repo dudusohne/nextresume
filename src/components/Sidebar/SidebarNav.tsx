@@ -1,30 +1,30 @@
-import { Stack } from "@chakra-ui/react";
+import { Avatar, Stack, Text, useBreakpointValue, useColorModeValue } from "@chakra-ui/react";
 import {
-  RiContactsLine,
-  RiDashboardLine,
   RiLinkedinBoxFill,
   RiGithubFill,
 } from "react-icons/ri";
-import { BiMessageDots } from "react-icons/bi";
+import { SiGmail } from "react-icons/si";
 import { NavLink } from "./NavLink";
 import { NavSection } from "./NavSection";
 
+
 export function SidebarNav() {
+
+  const isDrawerSidebar = useBreakpointValue({
+    base: true,
+    lg: false
+  })
+
+  const nameColor = useColorModeValue("gray.800", "orange.200")
+
   return (
     <Stack spacing="12" align="flex-start" zIndex={10}>
-      {/* <NavSection title="GENERAL">
-        <NavLink icon={RiDashboardLine} href="/home">
-          Projects
-        </NavLink>
-        <NavLink icon={RiContactsLine} href="/about">
-          About
-        </NavLink>
-      </NavSection> */}
-
+      <Avatar width="200px" height="200px" name="Eduardo Sohne" src="https://avatars.githubusercontent.com/u/19408694?v=4" alignSelf="center" border={`2px solid orange`} />
+      {isDrawerSidebar ?
+        <>
+          <Text fontSize="28" alignSelf="center" color={nameColor} fontWeight="bold">Eduardo Sohne</Text>
+        </> : ''}
       <NavSection title="CONTACT">
-        <NavLink icon={BiMessageDots} href="/contact">
-          Contact Me
-        </NavLink>
         <NavLink
           icon={RiGithubFill}
           href="https://github.com/dudusohne"
@@ -39,7 +39,17 @@ export function SidebarNav() {
         >
           Linkedin
         </NavLink>
+        <NavLink
+          icon={SiGmail}
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=dudu.hit@gmail.com"
+          target="_blank"
+        >
+          Send me a Gmail
+        </NavLink>
       </NavSection>
     </Stack>
   );
+
+
+
 }

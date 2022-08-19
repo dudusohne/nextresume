@@ -4,7 +4,12 @@ import { Box, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader
 import { SidebarNav } from './SidebarNav'
 import { useSidebarDrawer } from '../../contexts/SidebarDrawerContext'
 
-export function Sidebar() {
+interface SidebarProps {
+    open: any;
+    close: any;
+}
+
+export function Sidebar({open, close}: SidebarProps) {
     const { isOpen, onClose } = useSidebarDrawer();
 
     const isDrawerSidebar = useBreakpointValue({
@@ -12,23 +17,30 @@ export function Sidebar() {
         lg: false
     })
 
+    const sidebarBg = useColorModeValue("gray.200", "gray.800")
+
+   
+
     if (isDrawerSidebar) {
         return (
-            <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
-                <DrawerOverlay>
-                    <DrawerContent p="4">
-                        <DrawerCloseButton mt="2" />
-                        <DrawerBody>
-                            <SidebarNav />
-                        </DrawerBody>
-                    </DrawerContent>
-                </DrawerOverlay>
+            <Drawer
+                isOpen={open}
+                placement='left'
+                onClose={close}
+            >
+                <DrawerOverlay height="100%" width="100%" />
+                <DrawerContent bg={sidebarBg} p="4" maxHeight="100%">
+                    <DrawerCloseButton color="red" />
+                    <DrawerBody>
+                        <SidebarNav />
+                    </DrawerBody>
+                </DrawerContent>
             </Drawer>
         );
     }
 
     return (
-        <Box as="aside" w="64" mr="8">
+        <Box as="aside" w="64" mr="2">
             <SidebarNav />
         </Box>
     )

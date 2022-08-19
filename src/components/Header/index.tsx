@@ -6,6 +6,8 @@ import { Logo } from './Logo';
 import { RiMenuLine, RiWhatsappFill } from 'react-icons/ri';
 import { HeaderProps } from '../../interface/interface';
 import { SidebarNav } from '../Sidebar/SidebarNav';
+import { Sidebar } from '../Sidebar';
+import { useSidebarDrawer } from '../../contexts/SidebarDrawerContext';
 
 export function Header() {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -33,21 +35,7 @@ export function Header() {
                         current={btnRef}
                         bg={bg}
                     ></IconButton>
-                    <Drawer
-                        isOpen={isOpen}
-                        placement='left'
-                        onClose={onClose}
-
-                    >
-                        <DrawerOverlay />
-                        <DrawerContent bg={sidebarBg} p="4">
-                            <DrawerCloseButton color="red" />
-                            <DrawerHeader color="gray.600">Navegação</DrawerHeader>
-                            <DrawerBody>
-                                <SidebarNav />
-                            </DrawerBody>
-                        </DrawerContent>
-                    </Drawer>
+                    <Sidebar open={isOpen} close={onClose}/>
                 </>
             )}
             <Logo />
