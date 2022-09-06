@@ -131,6 +131,31 @@ export default function Home() {
                 </Link>
               </ProjectBox>
               <ProjectBox
+                title="FINE DASH"
+                subtitle="this project has a purpose of test some React features, as Styled Component and React Query."
+                tools="react, typescript, react query and styled components."
+                description="its a showcase of my githubs repos, there's a few animations to see too."
+              >
+                <Link
+                  href="https://github.com/dudusohne/fine-dash"
+                  target="_blank"
+                >
+                  <IconButton
+                    variant="outline"
+                    borderColor="gray.400"
+                    aria-label="Call Sage"
+                    fontSize={30}
+                    icon={<RiGithubFill color={color} />}
+                    _hover={{
+                      background: "red.500",
+                      color: "black.500",
+                      borderColor: "black",
+                      fontColor: "black",
+                    }}
+                  />
+                </Link>
+              </ProjectBox>
+              <ProjectBox
                 title="BAR TABS"
                 subtitle="this project has a purpose of managing stock, tabs and sales for a pub."
                 tools="react, typescript, firebase and sass."
