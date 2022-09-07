@@ -14,7 +14,6 @@ export function Header() {
     const btnRef = React.useRef()
 
     const bg = useColorModeValue("white", "gray.800")
-    const sidebarBg = useColorModeValue("gray.200", "gray.800")
 
     const isWideVersion = useBreakpointValue({
         base: false,

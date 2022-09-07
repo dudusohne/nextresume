@@ -23,3 +23,17 @@ Then, run the development server:
 ```bash
 yarn dev
 ```
+
+## Want to run with Docker?
+
+### if you already have Makefile installed, just run:
+`make run`
+
+### if don't, just run:
+`docker build --rm -t super-dev -f Dockerfile .`
+#### then run:
+`docker run -it --rm --name super-dev -p 3000:8080 super-dev`
+#### to stop(kill):
+`docker kill super-dev`
+#### to remove:
+`docker rm super-dev`

@@ -1,14 +1,22 @@
-import { Avatar, Stack, Text, useBreakpointValue, useColorModeValue } from "@chakra-ui/react";
+import { Avatar, Spinner, Stack, Text, useBreakpointValue, useColorModeValue } from "@chakra-ui/react";
+import axios from "axios";
 import {
   RiLinkedinBoxFill,
   RiGithubFill,
 } from "react-icons/ri";
 import { SiGmail } from "react-icons/si";
+import { useQuery } from "react-query";
+import { User } from "../../interface/interface";
 import { NavLink } from "./NavLink";
 import { NavSection } from "./NavSection";
 
-
 export function SidebarNav() {
+  const { data: user, isFetching } = useQuery<User>('user', async () => {
+    const response = await axios.get('https://api.github.com/users/dudusohne')
+    return response.data;
+  }, {
+    staleTime: 3000 * 60 // 3 minutes
+  })
 
   const isDrawerSidebar = useBreakpointValue({
     base: true,
@@ -19,10 +27,22 @@ export function SidebarNav() {
 
   return (
     <Stack spacing="12" align="flex-start" zIndex={10}>
-      <Avatar width="200px" height="200px" name="Eduardo Sohne" src="https://avatars.githubusercontent.com/u/19408694?v=4" alignSelf="center" border={`2px solid orange`} />
+      {!isFetching ?
+        <Avatar width="200px" height="200px" name={user?.name} src={user?.avatar_url} alignSelf="center" border={`2px solid orange`} />
+        :
+        <Spinner
+          thickness='4px'
+          speed='0.65s'
+          emptyColor='gray.200'
+          color='orange.500'
+          size='xl'
+          alignSelf="center"
+          justifySelf="center"
+        />
+      }
       {isDrawerSidebar ?
         <>
-          <Text fontSize="28" alignSelf="center" color={nameColor} fontWeight="bold">Eduardo Sohne</Text>
+          <Text fontSize="28" alignSelf="center" color={nameColor} fontWeight="bold">{user?.name}</Text>
         </> : ''}
       <NavSection title="CONTACT">
         <NavLink

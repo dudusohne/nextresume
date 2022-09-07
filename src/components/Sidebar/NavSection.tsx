@@ -1,20 +1,12 @@
 import { ReactNode } from 'react';
-import { Box, Text, Stack, useColorModeValue, useBreakpointValue } from '@chakra-ui/react';
-import { is } from '@react-spring/shared';
+import { Box, Text, Stack, useColorModeValue } from '@chakra-ui/react';
 
 interface NavSectionProps {
     title: string;
     children?: ReactNode;
 }
 
-export function NavSection({ title, children }: NavSectionProps) {
-
-    const isDrawerSidebar = useBreakpointValue({
-        base: true,
-        lg: false
-      })
-    
-    
+export function NavSection({ title, children }: NavSectionProps) {    
     const color = useColorModeValue("gray.600", "gray.500")
 
     return (

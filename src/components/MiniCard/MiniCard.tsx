@@ -1,11 +1,8 @@
 import { Badge, Flex, Icon, Text, useColorModeValue } from "@chakra-ui/react";
+import { WorkTechs } from "../../interface/interface";
 
-interface MiniCardProps {
-    title: string;
-    description: string;
-    icon?: any;
+interface MiniCardProps extends WorkTechs {
     iconColor: string;
-    badge: string;
 }
 
 export function MiniCard({ title, description, icon, iconColor, badge }: MiniCardProps) {
@@ -28,7 +25,7 @@ export function MiniCard({ title, description, icon, iconColor, badge }: MiniCar
                 <Badge variant='solid' colorScheme={badge} >
                     <Text fontSize={['12px', '16px', '16px', '18px']}>{title}</Text>
                 </Badge>
-                <Icon fontSize={['12px', '16px', '25px', '25px']} as={icon} ml="2" color={iconColor}/>
+                <Icon fontSize={['12px', '16px', '25px', '25px']} as={icon} ml="2" color={iconColor} />
             </Flex>
             <Text>{description}</Text>
         </Flex>
