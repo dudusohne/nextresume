@@ -17,7 +17,8 @@ import { Sidebar } from "../components/Sidebar";
 import { ProjectBox } from "../components/ProjectBox";
 import { MiniCard } from "../components/MiniCard/MiniCard";
 
-import { PersonalProjects, WorkTechs } from "../interface/interface";
+import { Job, PersonalProjects, WorkTechs } from "../interface/interface";
+import { AboutJob } from "../components/AboutJob";
 
 export default function Home() {
   const color = useColorModeValue("gray.800", "gray.200");
@@ -25,7 +26,7 @@ export default function Home() {
   const textColorTwo = useColorModeValue("gray.600", "orange.300");
   const textColorThree = useColorModeValue("gray.600", "orange.200");
   const textColorFour = useColorModeValue("gray.600", "orange.100");
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onClose } = useDisclosure()
 
   const personalProjects: PersonalProjects[] = [
     {
@@ -101,6 +102,33 @@ export default function Home() {
       description: "database",
       icon: "GrMysql",
       iconColor: "cyan.400"
+    }
+  ]
+
+  const jobs: Job[] = [
+    {
+      job: "Web Developer",
+      company: "Smart Marketing Digital",
+      period: "03/21 -> 11/21",
+      role: "Develop landing pages, sites and web apps.",
+      description: "Marketing agency demands, like landing pages, sites and web apps. Work mostly with html/css/js and CMS's like wordpress.",
+      time: "full-time"
+    },
+    {
+      job: "React Developer",
+      company: "Edubrahub",
+      period: "10/21 -> 12/21",
+      role: "Develop, refactor, maintain a React front-end app.",
+      description: "Front-end React with typescript, styled components and redux.",
+      time: "per-time"
+    },
+    {
+      job: "Full-Stack Developer",
+      company: "Simbiose",
+      period: "11/21 -> present",
+      role: "Full stack developer with focus on front, working mostly with VUE3 and python.",
+      description: "Vue3, composition api, setup script, typescript, nuxt, python, django.",
+      time: "full-time"
     }
   ]
 
@@ -222,21 +250,47 @@ export default function Home() {
               color={color}
               mb="5"
             >
-              WORK STACK
+              EXPERIENCES
             </Text>
-            <Flex flexDirection="row" justify="flex-start">
-              {workTechs.map(workTech => {
+            <Flex flexDirection="row" justify="flex-start" flexWrap="wrap">
+              {jobs.map(job => {
                 return (
-                  <MiniCard
-                    key={workTech.title}
-                    title={workTech.title}
-                    badge={workTech.badge}
-                    description={workTech.description}
-                    icon={workTech.icon}
-                    iconColor={workTech.iconColor}
+                  <AboutJob
+                    key={job.job}
+                    job={job.job}
+                    company={job.company}
+                    period={job.period}
+                    role={job.role}
+                    description={job.description}
+                    time={job.time}
                   />
                 )
               })}
+            </Flex>
+            <Flex flexDirection="column" mt="10">
+              <Text
+                as="span"
+                fontSize={22}
+                fontWeight="bold"
+                color={color}
+                mb="5"
+              >
+                WORK STACK
+              </Text>
+              <Flex flexDirection="row" justify="flex-start">
+                {workTechs.map(workTech => {
+                  return (
+                    <MiniCard
+                      key={workTech.title}
+                      title={workTech.title}
+                      badge={workTech.badge}
+                      description={workTech.description}
+                      icon={workTech.icon}
+                      iconColor={workTech.iconColor}
+                    />
+                  )
+                })}
+              </Flex>
             </Flex>
           </Flex>
         </Flex>

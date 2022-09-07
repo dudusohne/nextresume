@@ -1,51 +1,24 @@
-import { Text, useColorModeValue, Grid, GridItem, Box, Divider } from '@chakra-ui/react';
-import { AboutJobProps } from '../../interface/interface';
+import { Text, useColorModeValue, Box, Flex } from '@chakra-ui/react';
+import { Job } from '../../interface/interface';
 
-export function AboutJob({ job, company, period, role }: AboutJobProps) {
-    const bg = useColorModeValue("gray.800", "red.900")
-    const title = useColorModeValue("gray.200", "black")
-    const text = useColorModeValue("gray.200", "gray.400")
+export function AboutJob({ job, company, period, role, description, time }: Job) {
+    const bg = useColorModeValue("gray.800", "gray.700")
+    const title = useColorModeValue("gray.200", "yellow.300")
+    const companyColor = useColorModeValue("gray.200", "yellow.100")
+    const text = useColorModeValue("gray.200", "gray.300")
 
     return (
-        <Box bg={bg} maxWidth={540} borderRadius={6} p="3" border="1px solid #111">
-            <Grid
-                templateRows="repeat(2, 1fr)"
-                templateColumns="repeat(2, 1fr)"
-                gap={3}
-            >
-                <GridItem colSpan={1} rowSpan={1}>
-                    <Text as="span" fontSize={["10px", "12px", "16px", "18px"]} fontWeight="bold" color={title}>
-                        Job:
-                    </Text>
-                    <Text as="p" fontSize={["10px", "14px", "18px", "22px"]} fontWeight="medium" color={text}>
-                        {job}
-                    </Text>
-                </GridItem>
-                <GridItem colSpan={1} rowSpan={1}>
-                    <Text as="span" fontSize={["10px", "12px", "16px", "18px"]} fontWeight="bold" color={title}>
-                        Company:
-                    </Text>
-                    <Text as="p" fontSize={["10px", "14px", "18px", "22px"]} fontWeight="medium" color={text}>
-                        {company}
-                    </Text>
-                </GridItem>
-                <GridItem rowSpan={1} colSpan={1}>
-                    <Text as="span" fontSize={["10px", "12px", "16px", "18px"]} fontWeight="bold" color={title}>
-                        Period:
-                    </Text>
-                    <Text as="p" fontSize={["10px", "14px", "18px", "22px"]} fontWeight="medium" color={text}>
-                        {period}
-                    </Text>
-                </GridItem>
-                <GridItem rowSpan={1} colSpan={1}>
-                    <Text as="span" fontSize={["10px", "12px", "16px", "18px"]} fontWeight="bold" color={title}>
-                        Role:
-                    </Text>
-                    <Text as="p" fontSize={["10px", "14px", "18px", "22px"]} fontWeight="medium" color={text}>
-                        {role}
-                    </Text>
-                </GridItem>
-            </Grid>
+        <Box bg="gray.900" maxWidth={540} borderRadius={6} border="1px solid #434950" ml="1" mt="2">
+            <Text as="span" fontSize="20px" fontWeight="bold" px="2" color={title}>{job}</Text>
+            <Flex bg={bg} flexDirection="column" mt="2" p="2">
+                <Text as="span" color={companyColor}>{company}</Text>
+                <Text as="span" color="red.200" fontSize="12px">{time}</Text>
+                <Text as="span" color={text} opacity="0.7"><Text as="span" opacity="0.7">Period:</Text> {period}</Text>
+                <Text as="span" color={text} fontWeight="bold">{role}</Text>
+                {description &&
+                    <Text as="span" color={text} mt="3">{description}</Text>
+                }
+            </Flex>
         </Box>
     )
 }

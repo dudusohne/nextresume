@@ -1,25 +1,20 @@
 import React from 'react'
-import { Box, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, useBreakpointValue, useColorModeValue } from '@chakra-ui/react'
+import { Box, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerOverlay, useBreakpointValue, useColorModeValue } from '@chakra-ui/react'
 
 import { SidebarNav } from './SidebarNav'
-import { useSidebarDrawer } from '../../contexts/SidebarDrawerContext'
 
 interface SidebarProps {
-    open: any;
-    close: any;
+    open: boolean;
+    close: () => void;
 }
 
-export function Sidebar({open, close}: SidebarProps) {
-    const { isOpen, onClose } = useSidebarDrawer();
-
+export function Sidebar({ open, close }: SidebarProps) {
     const isDrawerSidebar = useBreakpointValue({
         base: true,
         lg: false
     })
 
     const sidebarBg = useColorModeValue("gray.200", "gray.800")
-
-   
 
     if (isDrawerSidebar) {
         return (

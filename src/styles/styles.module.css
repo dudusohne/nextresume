@@ -1,11 +1,9 @@
 .trailsText {
   position: relative;
   width: 100%;
-  /* line-height: 80px; */
   color: rgba(0, 0, 0, 0.918);
   font-size: 3em;
   font-weight: 800;
-  /* letter-spacing: -0.05em; */
   will-change: transform, opacity;
   overflow: hidden;
   font-family: "Roboto Mono", monospace;

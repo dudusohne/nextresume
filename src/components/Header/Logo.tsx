@@ -1,7 +1,6 @@
 import { Flex, Text, useColorModeValue } from '@chakra-ui/react';
 
 export function Logo() {
-
     const color = useColorModeValue("gray.800", "gray.300")
     const color2 = useColorModeValue("gray.400", "gray.600")
     const color3 = useColorModeValue("gray.600", "red.800")

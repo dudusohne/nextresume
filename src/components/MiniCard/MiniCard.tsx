@@ -25,7 +25,7 @@ export function MiniCard({ title, description, icon, iconColor, badge }: MiniCar
                 <Badge variant='solid' colorScheme={badge} >
                     <Text fontSize={['12px', '16px', '16px', '18px']}>{title}</Text>
                 </Badge>
-                <Icon fontSize={['12px', '16px', '25px', '25px']} as={icon} ml="2" color={iconColor} />
+                <Icon fontSize={['12px', '16px', '25px', '25px']} as={icon.toString()} ml="2" color={iconColor} />
             </Flex>
             <Text>{description}</Text>
         </Flex>

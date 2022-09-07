@@ -1,13 +1,9 @@
 import React from 'react';
-import { Flex, useBreakpointValue, IconButton, Icon, Divider, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, useDisclosure, Link, Stack, HStack, useColorModeValue } from '@chakra-ui/react'
-import { Profile } from './Profile';
-import { NotificationsNav } from './NotificationsNav';
-import { Logo } from './Logo';
+import { Flex, useBreakpointValue, IconButton, Icon, Divider, useDisclosure, Link, HStack, useColorModeValue } from '@chakra-ui/react'
 import { RiMenuLine, RiWhatsappFill } from 'react-icons/ri';
-import { HeaderProps } from '../../interface/interface';
-import { SidebarNav } from '../Sidebar/SidebarNav';
+import { ToggleColor } from './ToggleColor';
+import { Logo } from './Logo';
 import { Sidebar } from '../Sidebar';
-import { useSidebarDrawer } from '../../contexts/SidebarDrawerContext';
 
 export function Header() {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -34,13 +30,12 @@ export function Header() {
                         current={btnRef}
                         bg={bg}
                     ></IconButton>
-                    <Sidebar open={isOpen} close={onClose}/>
+                    <Sidebar open={isOpen} close={onClose} />
                 </>
             )}
             <Logo />
-
             <Flex align="center" ml="auto">
-                <NotificationsNav />
+                <ToggleColor />
                 {isWideVersion ?
                     <HStack spacing="4">
                         <Link href="https://api.whatsapp.com/send?phone=5551997951166" target="_blank">

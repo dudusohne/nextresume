@@ -1,5 +1,5 @@
-import { Box, Stack, Text, Button, useColorModeValue, Divider, Flex } from "@chakra-ui/react";
 import { ReactNode } from "react";
+import { Box, Stack, Text, Button, useColorModeValue, Divider, Flex } from "@chakra-ui/react";
 import { PersonalProjects } from "../../interface/interface";
 
 interface BoxProps extends PersonalProjects {

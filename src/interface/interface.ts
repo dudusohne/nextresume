@@ -1,8 +1,10 @@
-export interface AboutJobProps {
+export interface Job {
   job: string;
   company: string;
   period: string;
   role: string;
+  description: string;
+  time?: string;
 }
 
 export interface PersonalProjects {
